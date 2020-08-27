@@ -1,0 +1,11 @@
+++++++++++
++EVIL-SKN+
+++++++++++
+
+IF YOU WANT TO CREATE A SCAM 
+
+YOU NEED IN THE index.htm action="check.php AND IN THE INPUT PASSWORD type="password" name="key1" and button submit
+
+and error.html button back to index.htm
+
+and final.html
