@@ -1,0 +1,802 @@
+
+<html">
+
+<head>
+	<meta -equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0;">
+		<meta name="CommerceSearch" content="storeId_10151">
+		
+		<link rel="shortcut icon" href="" mce_href="">
+		<script type="text/javascript">
+			
+			var WCParamJS = {
+				"storeId":'10151',
+				"catalogId":'10001',
+				"langId":'-2',
+				"pageView":'',
+				"orderBy":'',
+				"orderByContent":'',
+				"searchTerm":''
+			};
+			var absoluteURL = "";
+			var imageDirectoryPath = "/wcsstore/InwiStorefrontAssetStore/";
+			var styleDirectoryPath = "images/colors/color1/";
+			var supportPaymentTypePromotions = false;
+			var subsFulfillmentFrequencyAttrName = "fulfillmentFrequency";
+			var subsPaymentFrequencyAttrName = "paymentFrequency";
+			var subsTimePeriodAttrName = "timePeriod";
+			var storeNLS = null;
+			
+			function getAbsoluteURL() {
+				if (absoluteURL != "") {
+					var currentURL = document.URL;
+					var currentProtocol = "";
+					if (currentURL.indexOf("://") != -1) {
+						currentProtocol = currentURL.substring(0, currentURL.indexOf("://"));
+					}
+					var savedProtocol = "";
+					if (absoluteURL.indexOf("://") != -1) {
+						savedProtocol = absoluteURL.substring(0, absoluteURL.indexOf("://"));
+					}
+					if (currentProtocol != savedProtocol) {
+						absoluteURL = currentProtocol + absoluteURL.substring(absoluteURL.indexOf("://"));
+					}
+				}
+				return absoluteURL;
+			}
+			
+			function getImageDirectoryPath() {
+				return imageDirectoryPath;
+			}
+			
+			function getStyleDirectoryPath() {
+				return styleDirectoryPath;
+			}
+	
+			dojo.require("wc.service.common");
+			dojo.require("dojo.number");
+			 
+			 if(storeNLS == null) {
+				 dojo.requireLocalization("storetext", "StoreText");
+				 storeNLS = dojo.i18n.getLocalization("storetext","StoreText");
+			 }
+	
+			
+			
+			dojo.addOnLoad(function() { 
+				
+				MessageHelper.setMessage("DEFAULT_EMAIL_VALUE", "exemple@exemple.com");
+				
+				MessageHelper.setMessage("ERROR_EmailEmpty", "La zone Adresse électronique ne peut pas être vide.");
+				
+				MessageHelper.setMessage("ERROR_CaptchaEmpty", "Veuillez renseigner le code captcha.");
+				
+				MessageHelper.setMessage("ERROR_LogonIdEmpty", "Veuillez renseigner votre email de connexion.");
+				
+				MessageHelper.setMessage("ERROR_PasswordEmpty", "Veuillez renseigner votre mot de passe.");
+				
+				MessageHelper.setMessage("ERROR_CaptchaInvalid", "Captcha incorrecte.");
+				
+				MessageHelper.setMessage("EMAIL_ResetPassword_Success", "Un mail de demande de réinitialisation de votre mot de passe vous a été envoyé. Merci de vérifier votre boite de réception.");
+				
+				MessageHelper.setMessage("State_choice_label", "choisir une région");
+				
+				MessageHelper.setMessage("ERROR_INVALIDEMAILFORMAT", "Adresse email incorrecte.Veuillez vérifier vos identifiants.");
+				
+				MessageHelper.setMessage("CONTACT_US_SUCCESS", "Votre mail a bien été envoyé."); 
+				
+				MessageHelper.setMessage("CONTACT_US_ERROR", "Adresse email incorrecte.Veuillez vérifier vos identifiants.");
+				
+				MessageHelper.setMessage("CONTACT_US_EMPTYSUBJECT", "Le sujet ne peut pas être vide");
+				
+				MessageHelper.setMessage("CONTACT_US_EMPTYMESSAGE", "Le message ne peut pas être vide");
+				
+				MessageHelper.setMessage("CONTACT_US_EMPTYFIELDS", "Veuillez remplir tous les champs avec des valeurs valides");
+				
+				dojo.query("input[type='text']").connect("onfocus", function(event) {
+				    dojo.addClass(this,'displayText');
+				});
+				
+				
+				if(dojo.query("#mycarousel ul li").length == 0){
+					dojo.query(".bannerPub").forEach(function(node, index, arr){
+						dojo.addClass(node, "no_image")
+					});
+				}
+				
+			    try{
+			    //loadSocialTag(document, 'script', 'twitter-wjs','//platform.twitter.com/widgets.js');
+			    //loadSocialTag(document, 'script', 'facebook-jssdk','//connect.facebook.net/fr_FR/all.js#xfbml=1&appId=243995865663333');
+			    }catch(e){}
+			});
+		</script>
+	
+   
+			
+	
+	<title>INWI - Connexion</title>
+</head>
+
+<body class="">
+
+
+
+
+	
+
+
+<style>
+
+img.shadowPiece{
+	display:none;
+}
+</style>
+
+
+<span class="spanacce" id="MessageArea_ACCE_Title" style="display:none;">Boîte de dialogue Message</span>
+
+
+
+
+
+<span class="spanacce" id="ariaMessage_ACCE_Label" style="display:none;">???ACCE_Display_Update_Message???</span>
+<span class="spanacce" style="display:none;" role="region" aria-labelledby="ariaMessage_ACCE_Label" id="ariaMessage" aria-live="assertive" aria-atomic="true" aria-relevant="additions"></span>
+
+						<div class="grey-bg" id="WC_AccountDisplay_div_1">
+	
+<link rel="stylesheet" type="text/css" href="INWI%20-%20Connexion_files/btq.css">
+<div class="inwi_header_footer" data-lang="fr"><header role="banner" id="header">       <div class="header-desktop-menu visible-lg visible-md">         <div class="container">           <div class="row">             <div class="col-lg-2 col-md-2 logo">                 <div class="region region-logo-widget">           <a class="logo navbar-btn pull-left" ="" title="Accueil" rel="home">            <img src="INWI%20-%20Connexion_files/logo.png" alt="logo inwi ">     </a>          </div>              </div>             <div class="col-lg-7 col-md-7 main-menu">                 <div class="region region-main-menu">     <nav role="navigation" aria-labelledby="block-inwi-main-menu-menu" id="block-inwi-main-menu">                       <ul class="nav navbar-nav">                                                 <li class="menu-icon-142 has-mega-menu mega-menu-item mega-menu-parent-item mega-menu-item-current">           <a ="://inwi.ma/" target="" data-drupal-link-system-path="&lt;front&gt;">particuliers</a>                                           <div class="sub-menu">         <ul class="navbar-nav nav container">           <li class="sub-logo"><span class="logo-sub-menu"></span></li>                                       <li class="mega-menu-item">         <a ="://inwi.ma/mobile" target="" data-drupal-link-system-path="node/103">Mobile</a>                                   <div class="mega-sub-menu">         <div class="container">                                       <ul class="col-md-4">           <li class="dropdown-header">           <a class="rejoignez" target="" data-drupal-link-system-path="&lt;front&gt;">Nos offres</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a ="://inwi.ma/mobile/sans-abonnement/tictac" target="" data-drupal-link-system-path="node/5252">Offres sans abonnement</a>                   </li>                                     <li 
+class="mega-menu-item-has-children">           <a ="" target="" data-drupal-link-system-path="node/106">Forfaits</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a ="" target="" data-drupal-link-system-path="node/29347">Portabilité</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a ="://boutique.inwi.ma/boutique/telephones-mobiles?param=menu" class="is_fr" target="">Catalogue Téléphones</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a ="://boutique.inwi.ma/boutique/telephones-mobiles-ar" class="is_ar" target="">قائمة الهواتف النقالة</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a ="://inwi.ma/mobile/roaming" target="" data-drupal-link-system-path="node/6637">Roaming</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a ="://inwi.ma/mobile/services" target="" data-drupal-link-system-path="node/6650">Services</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a ="://inwi.ma/mobile/recharges" target="" data-drupal-link-system-path="node/6632">Recharges</a>                   </li>                     </ul>                    </li>             </ul>                                     <ul class="col-md-4">           <li class="dropdown-header">           <a ="://espaceclient.inwi.ma/" class="dejaclient" target="_blank">Déjà Client</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a ="://myinwi.ma/" target="_blank">Gérez votre ligne</a>                       
+                                          </li><li>             <a ="" target="" data-drupal-link-system-path="node/27151">L'application My inwi</a>                   </li>                                       <li>             <a ="://myinwi.ma/" target="_blank">Suivez votre consommation</a>                   </li>                                       <li>             <a ="://rechargeonline.inwi.ma/rel/identification" target="_blank">Rechargez votre compte</a>                   </li>                                       <li>             <a ="://factureonline.inwi.ma/PFEL/init" target="_blank">Payez votre facture</a>                   </li>                                                                   <li class="mega-menu-item-has-children">           <a ="://inwi.ma/fidelite" target="_blank">Programme de Fidélité</a>                                                                 </li><li>             <a ="://boutique.inwi.ma/changermonmobile/mon-compte" target="">Changer mon mobile</a>                   </li>                                       <li>             <a ="://club.inwi.ma/" target="_blank">Club inwi</a>                   </li>                                                   </ul>                    </li>             </ul>                     <div class="col-sm-4 col-xs-12 hidden-xs pub-menu hidden-sm" id="pub-menu">       </div>         </div>       </div>                    </li>                                     <li class="mega-menu-item">         <a ="://inwi.ma/internet" target="" data-drupal-link-system-path="node/4574">Internet et fixe</a>                                   <div class="mega-sub-menu">         <div class="container">                                       <ul class="col-md-4">           <li class="dropdown-header">           <a class="rejoignez" target="" data-drupal-link-system-path="&lt;front&gt;">Nos offres</a>                                   <ul class="menu">      
+                                 <li class="mega-menu-item-has-children">           <a ="" target="" data-drupal-link-system-path="node/15700">Fibre optique</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a ="://inwi.ma/internet/idar/adsl" target="" data-drupal-link-system-path="node/189">ADSL</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a ="://boutique.inwi.ma/webapp/wcs/stores/servlet/CategoryDisplay?categoryId=18501&amp;langId=-2&amp;storeId=10151&amp;catalogId=10001" class="is_fr" target="">idar duo</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a ="://boutique.inwi.ma/boutique/idar-duo-ar" class="is_ar" target="">idar duo</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a target="" data-drupal-link-system-path="&lt;front&gt;">idar sans abonnement</a>                                                                 </li><li>             <a ="://inwi.ma/internet/idar-3g-plus-sans-abonnement" target="" data-drupal-link-system-path="node/4595">Internet 3G+</a>                   </li>                                       <li>             <a ="://inwi.ma/internet/idar-4g-sans-abonnement" target="" data-drupal-link-system-path="node/4596">Internet 4G</a>                   </li>                                                                   <li class="mega-menu-item-has-children">           <a ="://boutique.inwi.ma/boutique/offres-internet-4g-avec-abonnement?param=menu" target="">idar avec abonnement </a>                   </li>                                     <li class="mega-menu-item-has-children">           <a ="://inwi.ma/internet/services" target="" data-drupal-link-system-path="node/177">Services</a>                   
+</li>                                     <li class="mega-menu-item-has-children">           <a ="" target="" data-drupal-link-system-path="node/175">Wifi7dak</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a ="://inwi.ma/fixe/offres/sans-abonnement" target="" data-drupal-link-system-path="node/6680">Offres fixe</a>                   </li>                     </ul>                    </li>             </ul>                                     <ul class="col-md-4">           <li class="dropdown-header">           <a ="://espaceclient.inwi.ma/" class="dejaclient" target="_blank">Déjà Client</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a ="://myinwi.ma/" target="_blank">Gérez votre ligne</a>                                                                 </li><li>             <a ="://inwi.ma/myinwi" target="" data-drupal-link-system-path="node/27151">L'application My inwi</a>                   </li>                                       <li>             <a ="://myinwi.ma/" target="_blank">Suivez votre consommation</a>                   </li>                                       <li>             <a ="://rechargeonline.inwi.ma/rel/identification" target="_blank">Rechargez votre compte</a>                   </li>                                       <li>             <a ="://factureonline.inwi.ma/PFEL/init" target="_blank">Payez votre facture</a>                   </li>                                                                   <li class="mega-menu-item-has-children">           <a ="://inwi.ma/fidelite" target="_blank">Programme de Fidélité</a>                                                                 </li><li>             <a ="://boutique.inwi.ma/changermonmobile/mon-compte" target="">Changer mon mobile</
+a>                   </li>                                       <li>             <a ="://club.inwi.ma/" target="_blank">Club inwi</a>                   </li>                                                   </ul>                    </li>             </ul>                     <div class="col-sm-4 col-xs-12 hidden-xs pub-menu hidden-sm" id="pub-menu">       </div>         </div>       </div>                    </li>                                     <li class="mega-menu-item">         <a target="" data-drupal-link-system-path="&lt;front&gt;">Bons plans</a>                                   <div class="mega-sub-menu">         <div class="container">                                       <ul class="col-md-4">           <li class="dropdown-header">           <a class="rejoignez" target="" data-drupal-link-system-path="&lt;front&gt;">Bons plans</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a ="://inwi.ma/bons-plans/deals" target="" data-drupal-link-system-path="bons-plans/deals">Exclusivités web</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a ="://inwi.ma/bons-plans/offres-et-promos" target="" data-drupal-link-system-path="bons-plans/offres-et-promos">Offres et promotions</a>                   </li>                     </ul>                    </li>             </ul>                                     <ul class="col-md-4">           <li class="dropdown-header">           <a ="://espaceclient.inwi.ma/" class="dejaclient" target="_blank">Déjà Client</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a ="://inwi.ma/fidelite" target="_blank">Programme de Fidélité</a>                                                                 </li><li>             <a ="://accounts.inwi.ma/login?
+service=%3A%2F%2Fboutique.inwi.ma%2Fchangermonmobile%2Fmon-compte" target="">Changer mon mobile</a>                   </li>                                       <li>             <a ="://club.inwi.ma/" target="_blank">Club inwi</a>                   </li>                                                   </ul>                    </li>             </ul>                     <div class="col-sm-4 col-xs-12 hidden-xs pub-menu hidden-sm" id="pub-menu">       </div>         </div>       </div>                    </li>                                     <li class="mega-menu-item">         <a ="://inwi.ma/assistance" target="" data-drupal-link-system-path="node/188">Assistance</a>                                   <div class="mega-sub-menu">         <div class="container">                                       <ul class="col-md-4">           <li class="dropdown-header">           <a ="://inwi.ma/assistance/faq" class="rejoignez" target="" data-drupal-link-system-path="node/185">FAQ par thème</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">Particuliers_Assistance_Gauche_Invisible</a>                                                                 </li><li>             <a ="://inwi.ma/assistance/faq/mobile/abonnement" target="" data-drupal-link-system-path="assistance/faq/mobile/abonnement">Mobile avec abonnement</a>                   </li>                                       <li>             <a ="://inwi.ma/assistance/faq/mobile/sans-abonnement" target="" data-drupal-link-system-path="assistance/faq/mobile/sans-abonnement">Mobile sans abonnement</a>                   </li>                                       <li>             <a ="://inwi.ma/assistance/faq/internet-et-fixe" target="" data-drupal-link-system-path="assistance/faq/internet-et-fixe">Internet et fixe</a>      
+             </li>                                       <li>             <a ="" target="" data-drupal-link-system-path="assistance/faq/services-et-parametrage">Services et paramétrage</a>                   </li>                                       <li>             <a ="://inwi.ma/assistance/faq/boutique-en-ligne" target="" data-drupal-link-system-path="assistance/faq/boutique-en-ligne">Boutique en ligne</a>                   </li>                                                   </ul>                    </li>             </ul>                                     <ul class="col-md-4">           <li class="dropdown-header">           <a class="rejoignez" target="" data-drupal-link-system-path="&lt;front&gt;">Urgences</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">Particuliers_Assistance_Centre_Invisible</a>                                                                 </li><li>             <a ="://inwi.ma/assistance/urgences#faq-particuliers-urgences-t%C3%A9l%C3%A9phone-vol%C3%A9" target="" data-drupal-link-system-path="assistance/urgences">Mobile perdu/ volé</a>                   </li>                                       <li>             <a ="://inwi.ma/assistance/urgences#faq-particuliers-urgences-carte-bloqu%C3%A9e" target="" data-drupal-link-system-path="assistance/urgences">Carte SIM bloquée</a>                   </li>                                       <li>             <a ="://inwi.ma/assistance/urgences#faq-particuliers-urgences-espace-client" target="" data-drupal-link-system-path="assistance/urgences">Activer son compte / Mot de passe oublié</a>                   </li>                                       <li>             <a ="://inwi.ma/assistance/nous-contacter" target="" data-drupal-link-system-
+path="node/5168">Nous contacter</a>                   </li>                                       <li>             <a ="#chat" target="_blank" data-drupal-link-system-path="&lt;front&gt;">Tchat</a>                   </li>                                       <li>             <a ="://inwi.ma/agences" target="_self" title="Agences" data-drupal-link-system-path="agences">Nos agences</a>                   </li>                                                   </ul>                    </li>             </ul>                     <div class="col-sm-4 col-xs-12 hidden-xs pub-menu hidden-sm" id="pub-menu">       </div>         </div>       </div>                    </li>                       </ul>       </div>                    </li>                                               <li class="menu-icon-201 has-mega-menu mega-menu-item mega-menu-parent-item">           <a ="://inwi.ma/entreprises" target="" data-drupal-link-system-path="node/228">entreprises</a>                                           <div class="sub-menu">         <ul class="navbar-nav nav container">           <li class="sub-logo"><span class="logo-sub-menu"></span></li>                                       <li class="mega-menu-item">         <a target="" data-drupal-link-system-path="&lt;front&gt;">Fixe &amp; Connectivité Critique</a>                                   <div class="mega-sub-menu">         <div class="container">                                       <ul class="col-md-4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">invisible</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a target="" data-drupal-link-system-path="&lt;front&gt;">Business Connect</a>                                                                 </li><li>             <a ="://inwi.ma/entreprises/fibre-pro" target="" data-drupal-link-system-path="node/
+27188">Fibre Pro</a>                   </li>                                       <li>             <a ="://inwi.ma/entreprises/internet/offres-combinees/business-connect" target="" data-drupal-link-system-path="node/6751">Business Connect 4G</a>                   </li>                                       <li>             <a ="://inwi.ma/entreprises/internet/offres-combinees/business-connect/adsl" target="" data-drupal-link-system-path="node/13685">Business Connect Adsl</a>                   </li>                                       <li>             <a ="://inwi.ma/entreprises/internet/offres-combinees/business-connect-fixe" target="" data-drupal-link-system-path="node/13508">Business Connect Fixe</a>                   </li>                                                                   <li class="mega-menu-item-has-children">           <a target="" data-drupal-link-system-path="&lt;front&gt;">Offres combinées</a>                                                                 </li><li>             <a ="://inwi.ma/entreprises/internet/offres-combinees/double-play" target="" data-drupal-link-system-path="node/214">Double play</a>                   </li>                                       <li>             <a ="://inwi.ma/entreprises/internet/haut-debit" target="" data-drupal-link-system-path="node/218">Internet Haut Débit</a>                   </li>                                       <li>             <a ="://inwi.ma/entreprises/internet/vsat" target="" data-drupal-link-system-path="node/6822">inwi Business Sat</a>                   </li>                                                   </ul>                    </li>             </ul>                                     <ul class="col-md-4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">invisible</a>                                   <ul class="menu">                                       <li 
+class="mega-menu-item-has-children">           <a target="" data-drupal-link-system-path="&lt;front&gt;">Connectivité </a>                                                                 </li><li>             <a ="" target="" data-drupal-link-system-path="node/220">Lan to Lan</a>                   </li>                                       <li>             <a ="://inwi.ma/entreprises/data/connectivite/ip-vpn-mpls" target="" data-drupal-link-system-path="node/6634">IP VPN MPLS</a>                   </li>                                       <li>             <a ="://inwi.ma/entreprises/data/connectivite/liaisons_louees-internationales" target="" data-drupal-link-system-path="node/221">Liaisons louées internationales</a>                   </li>                                       <li>             <a ="://inwi.ma/entreprises/data/nom-de-domaine" target="" data-drupal-link-system-path="node/7017">Nom de domaine</a>                   </li>                                                   </ul>                    </li>             </ul>                     <div class="col-sm-4 col-xs-12 hidden-xs pub-menu hidden-sm" id="pub-menu">       </div>         </div>       </div>                    </li>                                     <li class="mega-menu-item">         <a target="" data-drupal-link-system-path="&lt;front&gt;">Mobilité &amp; IoT</a>                                   <div class="mega-sub-menu">         <div class="container">                                       <ul class="col-md-4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;"> -</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a target="" data-drupal-link-system-path="&lt;front&gt;">Offres mobiles</a>                                                                 </li><li>  
+           <a ="" target="" data-drupal-link-system-path="node/27548">Smartphones du moment</a>                   </li>                                       <li>             <a ="" target="" data-drupal-link-system-path="node/208">Forfaits Open+</a>                   </li>                                       <li>             <a ="://inwi.ma/entreprises/mobile/solutions/forfaits-illimites" target="" data-drupal-link-system-path="node/93">Forfaits illimités</a>                   </li>                                                   </ul>                    </li>             </ul>                                     <ul class="col-md-4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">invisible</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a target="" data-drupal-link-system-path="&lt;front&gt;">Services</a>                                                                 </li><li>             <a ="://inwi.ma/entreprises/mobile/services/convertin" target="" data-drupal-link-system-path="node/6796">Convert'in</a>                   </li>                                       <li>             <a ="://inwi.ma/entreprises/mobile/services/options-et-pass" target="" data-drupal-link-system-path="node/102">Options et Pass</a>                   </li>                                       <li>             <a ="://inwi.ma/entreprises/mobile/services/roaming" target="" data-drupal-link-system-path="node/210">Roaming </a>                   </li>                                                                   <li class="mega-menu-item-has-children">           <a ="://inwi.ma/entreprises/mobile/programme-de-fidelite" target="" data-drupal-link-system-
+path="node/6587">Programme de fidélité</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a target="" data-drupal-link-system-path="&lt;front&gt;">IoT</a>                                                                 </li><li>             <a ="://inwi.ma/entreprises/data/machine-to-machine" target="" data-drupal-link-system-path="node/4580">M2M by inwi Business</a>                   </li>                                       <li>             <a ="://inwi.ma/entreprises/mobile/services/mobile-device-management" target="" data-drupal-link-system-path="node/6844">Mobile Device Management</a>                   </li>                                                   </ul>                    </li>             </ul>                                     <ul class="col-md-4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">invisible</a>                   </li>             </ul>                     <div class="col-sm-4 col-xs-12 hidden-xs pub-menu hidden-sm" id="pub-menu">       </div>         </div>       </div>                    </li>                                     <li class="mega-menu-item">         <a target="" data-drupal-link-system-path="&lt;front&gt;">Cloud</a>                                   <div class="mega-sub-menu">         <div class="container">                                       <ul class="col-md-4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">-</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a ="://inwi.ma/entreprises/Le-Cloud-inwi-Business" target="" data-drupal-link-system-path="node/25264">Le Cloud inwi Business</a>                                                                 </li><li>             <a ="://inwi.ma/
+entreprises/inwi-Business-datacenters" target="" data-drupal-link-system-path="node/25265">inwi Business datacenters</a>                   </li>                                       <li>             <a ="" target="" data-drupal-link-system-path="node/29315">inwi Business Cloud</a>                   </li>                                                   </ul>                    </li>             </ul>                     <div class="col-sm-4 col-xs-12 hidden-xs pub-menu hidden-sm" id="pub-menu">       </div>         </div>       </div>                    </li>                                     <li class="mega-menu-item">         <a ="://inwi.ma/entreprises/inwi-Cyber-Defense-votre-rempart-contre-les-menaces-du-Net" target="">Sécurité</a>                                   <div class="mega-sub-menu">         <div class="container">                                       <ul class="col-md-4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">-</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a ="://inwi.ma/entreprises/inwi-cyber-defense" target="" data-drupal-link-system-path="node/23377">inwi Cyberdéfense</a>                                                                 </li><li>             <a ="://inwi.ma/entreprises/SOC-inwi-Business" target="" data-drupal-link-system-path="node/24737">SOC inwi Business</a>                   </li>                                       <li>             <a ="://inwi.ma/entreprises/Business-Protect" target="" data-drupal-link-system-path="node/24738">Business Protect</a>                   </li>                                       <li>             <a ="://inwi.ma/entreprises/Managed-Anti-DDoS" target="" data-drupal-link-system-path="node/24739">Managed Anti-DDoS</a>                   </li> 
+                                                  </ul>                    </li>             </ul>                     <div class="col-sm-4 col-xs-12 hidden-xs pub-menu hidden-sm" id="pub-menu">       </div>         </div>       </div>                    </li>                                     <li class="mega-menu-item">         <a target="" data-drupal-link-system-path="&lt;front&gt;">Nous connaître</a>                                   <div class="mega-sub-menu">         <div class="container">                                       <ul class="col-md-4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">Entreprises_nousconnaitre_Gauche_invisible</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a ="://inwi.ma/entreprises/nous-connaitre/inwi-business" target="" data-drupal-link-system-path="node/6589">inwi Business</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a ="://inwi.ma/entreprises/agences" target="" data-drupal-link-system-path="entreprises/agences">Points de vente</a>                   </li>                     </ul>                    </li>             </ul>                                     <ul class="col-md-4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">Entreprises_nousconnaitre_Centre_invisible</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a ="://inwi.ma/entreprises/nous-connaitre/nos-clients" target="" data-drupal-link-system-path="node/6569">Nos clients</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a ="://inwi.ma/entreprises/mon-entreprise-connectee" target="" 
+data-drupal-link-system-path="node/6910">mon entreprise connectée</a>                   </li>                     </ul>                    </li>             </ul>                     <div class="col-sm-4 col-xs-12 hidden-xs pub-menu hidden-sm" id="pub-menu">       </div>         </div>       </div>                    </li>                       </ul>       </div>                    </li>                                               <li class="menu-icon-30 has-mega-menu mega-menu-item mega-menu-parent-item">           <a ="://inwi.ma/fun" target="" data-drupal-link-system-path="node/6571">fun</a>                                           <div class="sub-menu">         <ul class="navbar-nav nav container">           <li class="sub-logo"><span class="logo-sub-menu"></span></li>                                       <li class="mega-menu-item">         <a ="://la3bin.inwi.ma/" target="_blank">Se divertir ?</a>                   </li>                                     <li class="mega-menu-item">         <a ="://emadrassa.inwi.ma/" class="is_fr" target="_blank">Apprendre ?</a>                   </li>                                     <li class="mega-menu-item">         <a ="://emadrassa.inwi.ma/ar" class="is_ar" target="">نستافدو؟</a>                   </li>                                     <li class="mega-menu-item">         <a ="://diriddik.ma/" class="is_fr" target="_blank">S'entraider ?</a>                   </li>                                     <li class="mega-menu-item">         <a ="://diriddik.ma/ar" class="is_ar" target="">نتعاونو؟</a>                   </li>                                     <li class="mega-menu-item">         <a ="://inwi.ma/bons-plans" target="_self" data-drupal-link-system-path="node/3110">Profiter de nos bons plans</a>                   </li>                       </ul>       </div>                    </li>                                               <li class="menu-icon-192 has-mega-menu mega-menu-item 
+mega-menu-parent-item">           <a ="://inwi.ma/corporate" target="" data-drupal-link-system-path="node/15">corporate</a>                                           <div class="sub-menu">         <ul class="navbar-nav nav container">           <li class="sub-logo"><span class="logo-sub-menu"></span></li>                                       <li class="mega-menu-item">         <a target="" data-drupal-link-system-path="&lt;front&gt;">Tout sur inwi</a>                                   <div class="mega-sub-menu">         <div class="container">                                       <ul class="col-md-4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">découvrezrinwi_toutsurinwi_Gauche_invisible</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a ="://inwi.ma/corporate/inwi-en-bref" target="" data-drupal-link-system-path="node/4460">inwi en bref </a>                   </li>                                     <li class="mega-menu-item-has-children">           <a ="://inwi.ma/corporate/bien-etre" target="" data-drupal-link-system-path="node/28347">Bien-être</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a ="://inwi.ma/corporate/Gaming" target="" data-drupal-link-system-path="node/28346">Gaming</a>                   </li>                     </ul>                    </li>             </ul>                                     <ul class="col-md-4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">découvrezrinwi_toutsurinwi_Centre_invisible</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a href="://inwi.ma/corporate/inwi-en-chiffres" target="" data-
+drupal-link-system-path="node/4465">inwi en chiffres</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="" target="" data-drupal-link-system-path="node/4547">Innovation et entrepreneuriat</a>                                                                 </li><li>             <a href="://inwi.ma/corporate/innovation/particuliers" target="" data-drupal-link-system-path="node/5262">Marché des particuliers</a>                   </li>                                       <li>             <a href="://inwi.ma/corporate/innovation/entreprises" target="" data-drupal-link-system-path="node/5446">Marché des entreprises</a>                   </li>                                       <li>             <a href="://inwi.ma/corporate/innovation-et-entrepreneuriat/entrepreneuriat" target="" data-drupal-link-system-path="node/27491">Entrepreneuriat</a>                   </li>                                                                   <li class="mega-menu-item-has-children">           <a href="://inwi.ma/corporate/reseau" target="" data-drupal-link-system-path="node/6576">Couverture réseau</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="://inwi.ma/corporate/agences" target="" data-drupal-link-system-path="corporate/agences">Agences inwi</a>                   </li>                     </ul>                    </li>             </ul>                     <div class="col-sm-4 col-xs-12 hidden-xs pub-menu hidden-sm" id="pub-menu">       </div>         </div>       </div>                    </li>                                     <li class="mega-menu-item">         <a target="" data-drupal-link-system-path="&lt;front&gt;">Responsabilité sociale</a>                                   <div class="mega-sub-menu">         <div class="container">                                       <ul class="col-md-
+4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">découvrezinwi_responsabilitésociale_Gauche_invisible</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a href="://inwi.ma/corporate/notre-politique-rse" target="" data-drupal-link-system-path="node/6580">Notre politique RSE</a>                                                                 </li><li>             <a href="://inwi.ma/corporate/volontariat" target="" data-drupal-link-system-path="node/4481">Volontariat</a>                   </li>                                       <li>             <a href="://inwi.ma/corporate/education" target="" data-drupal-link-system-path="node/4478">Education</a>                   </li>                                       <li>             <a href="://inwi.ma/corporate/notre-politique-rse/soutien-a-l-entrepreneuriat" target="" data-drupal-link-system-path="node/27507">Soutien à l'Entrepreneuriat</a>                   </li>                                                                   <li class="mega-menu-item-has-children">           <a href="://inwi.ma/corporate/environnement" target="">Protection de l’environnement</a>                   </li>                     </ul>                    </li>             </ul>                                     <ul class="col-md-4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">découvrezinwi_responsabilitésociale_Centre_invisible</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a href="://inwi.ma/corporate/protection-des-donnees" target="" data-drupal-link-system-path="node/4483">Protection des données</a>                   </li>                                     <li class="mega-menu-
+item-has-children">           <a href="://inwi.ma/corporate/protection-des-enfants" target="" data-drupal-link-system-path="node/6578">Protection des enfants</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="://inwi.ma/corporate/mobile-et-sante" target="" data-drupal-link-system-path="node/4482">Mobile et santé</a>                   </li>                     </ul>                    </li>             </ul>                     <div class="col-sm-4 col-xs-12 hidden-xs pub-menu hidden-sm" id="pub-menu">       </div>         </div>       </div>                    </li>                                     <li class="mega-menu-item">         <a href="://linkedin.com/company/inwi/" target="_blank">Carrières</a>                   </li>                                     <li class="mega-menu-item">         <a target="" data-drupal-link-system-path="&lt;front&gt;">Espace Presse</a>                                   <div class="mega-sub-menu">         <div class="container">                                       <ul class="col-md-4">           <li class="dropdown-header">           <a href="://inwi.ma/corporate/communiques" target="" data-drupal-link-system-path="node/3123">Communiqués de presse</a>                   </li>             </ul>                                     <ul class="col-md-4">           <li class="dropdown-header">           <a href="://inwi.ma/presse" target="" data-drupal-link-system-path="presse">Revue de presse</a>                   </li>             </ul>                     <div class="col-sm-4 col-xs-12 hidden-xs pub-menu hidden-sm" id="pub-menu">       </div>         </div>       </div>                    </li>                       </ul>       </div>                    </li>                     </ul>         <div class="mega-menu-overlay"></div>    </nav>    </div>              </div>             <div class="col-lg-3 col-md-3 widgets">                 <div class="region 
+region-compte-widgets">     <section class="language-switcher-language-url pull-right" id="block-selecteurdelangue-2" role="navigation">           <ul class="links list-inline menu-lang"><li hreflang="fr" data-drupal-link-system-path="api/headerfooter/empty" class="fr is-active"><a href="://boutique.inwi.ma/webapp/wcs/stores/servlet/LogonForm?catalogId=10001&amp;langId=-23&amp;storeId=10151&amp;krypto=1jc%2BNEpCwjIBHCdMTne4l0DeQK0hIK%2B4nT5F6ScxSh%2BmtZqerXwSt5iQzzjz8hr02E306%2FQ%2FecMC%0AT6SF5F2rvJcFGGkOMGn79cUnjkStcq20NMiDpAIUlRd1U1OcKvADjs%2B6MFjV0nsw6i%2B0Lfnggqsf%0A0PgUe9Z25oWzy%2BuWA%2Fwzvz7fcUoaxQAgrnrlAJuoFb1vudUCL1HRnfstmL7WQQ%3D%3D&amp;ddkey=:TrackOrderStatus" class="language-link is-active" hreflang="fr" data-drupal-link-system-path="api/headerfooter/empty" onclick="addURL(this)">français</a></li><li hreflang="ar" data-drupal-link-system-path="api/headerfooter/empty" class="ar"><a href="://boutique.inwi.ma/webapp/wcs/stores/servlet/LogonForm?catalogId=10001&amp;langId=-23&amp;storeId=10151&amp;krypto=1jc%2BNEpCwjIBHCdMTne4l0DeQK0hIK%2B4nT5F6ScxSh%2BmtZqerXwSt5iQzzjz8hr02E306%2FQ%2FecMC%0AT6SF5F2rvJcFGGkOMGn79cUnjkStcq20NMiDpAIUlRd1U1OcKvADjs%2B6MFjV0nsw6i%2B0Lfnggqsf%0A0PgUe9Z25oWzy%2BuWA%2Fwzvz7fcUoaxQAgrnrlAJuoFb1vudUCL1HRnfstmL7WQQ%3D%3D&amp;ddkey=:TrackOrderStatus" class="language-link" hreflang="ar" data-drupal-link-system-path="api/headerfooter/empty" onclick="addURL(this)">العربية</a></li></ul>     </section> <nav role="navigation" aria-labelledby="block-inmenu-perso-menu" id="block-inmenu-perso">                <h2 class="visually-hidden" id="block-inmenu-perso-menu">inMENU_PERSO</h2>                            <ul class="menu nav navbar-nav navbar-right">                       <li class="menu-icon-199">         <a href="#topbar" class="btn-search" target="" data-drupal-link-system-path="&lt;front&gt;">recherche</a>                   </li>                   <li class="menu-icon-149">      <a class="cart-btn" target="" data-drupal-link-system-
+path="&lt;front&gt;">Panier</a>                   </li>                   <li class="menu-icon-148">         <a class="btn-compte" target="" data-drupal-link-system-path="&lt;front&gt;">Mon compte</a>                   </li>         </ul>        </nav> <section id="block-cartinfoblock" class="block"><div class="account-menu-off">     <span class="before-triangle"></span>     <div class="account-info-hidden">
+                                                                        
+                                                                      <h3>Connectez-vous</h3>                     <h4 class="list-menu-title">Espace client</h4>                 <ul>                          <li><a href="://myinwi.ma/" target="_blank">my inwi<span>&gt;</span></a></li>             <li><a href="://boutique.inwi.ma/webapp/wcs/stores/servlet/TrackOrderStatus?catalogId=10001&amp;langId=-2&amp;storeId=10151" target="_blank">Suivi de commande<span>&gt;</span></a></li>                 </ul>             <h4 class="list-menu-title">Fidélité</h4>         <ul>                      <li><a href="://club.inwi.ma/" target="_blank">Club inwi<span>&gt;</span></a></li>             <li><a href="://boutique.inwi.ma/webapp/wcs/stores/servlet/LogonForm?catalogId=10001&amp;storeId=11651&amp;langId=-2&amp;krypto=i2N%2F8E1jjWaSKjngq%2Brns7%2BsD5SHAHn1jj5a5jgzbLFojcKidsftvLmyBzwFXgKD&amp;ddkey=:reengagement/mon-compte" target="_blank">Changer mon mobile<span>&gt;</span></a></li>         </ul>     </div> </div></section>    </div>              </div>           </div>         </div>       </div>       <div class="header-mobile-menu visible-sm visible-xs">         <div class="mobile-header">           <div class="col-sm-3 col-xs-3">               <button class="hamburger-menu" id="toggle-menu">                     <span></span>             </button>           </div>           <div class="col-sm-6 col-xs-6 logo-mobile">               <div class="region region-logo-widget">           <a class="logo navbar-btn pull-left" href="" title="Accueil" rel="home">            <img src="INWI%20-%20Connexion_files/logo.png" alt="logo inwi ">     </a>          </div>            </div>           <div class="col-sm-3 col-xs-3 search-mobile">             <span class="search-btn-mobile"></span>               <div class="region region-lang-widgets">     <section class="language-switcher-language-url pull-right" id="block-inwi-selecteurdelangue" role="navigation">           <ul class="links list-inline 
+menu-lang"><li hreflang="fr" data-drupal-link-system-path="api/headerfooter/empty" class="fr is-active"><a href="://boutique.inwi.ma/webapp/wcs/stores/servlet/LogonForm?catalogId=10001&amp;langId=-23&amp;storeId=10151&amp;krypto=1jc%2BNEpCwjIBHCdMTne4l0DeQK0hIK%2B4nT5F6ScxSh%2BmtZqerXwSt5iQzzjz8hr02E306%2FQ%2FecMC%0AT6SF5F2rvJcFGGkOMGn79cUnjkStcq20NMiDpAIUlRd1U1OcKvADjs%2B6MFjV0nsw6i%2B0Lfnggqsf%0A0PgUe9Z25oWzy%2BuWA%2Fwzvz7fcUoaxQAgrnrlAJuoFb1vudUCL1HRnfstmL7WQQ%3D%3D&amp;ddkey=:TrackOrderStatus" class="language-link is-active" hreflang="fr" data-drupal-link-system-path="api/headerfooter/empty" onclick="addURL(this)">français</a></li><li hreflang="ar" data-drupal-link-system-path="api/headerfooter/empty" class="ar"><a href="://boutique.inwi.ma/webapp/wcs/stores/servlet/LogonForm?catalogId=10001&amp;langId=-23&amp;storeId=10151&amp;krypto=1jc%2BNEpCwjIBHCdMTne4l0DeQK0hIK%2B4nT5F6ScxSh%2BmtZqerXwSt5iQzzjz8hr02E306%2FQ%2FecMC%0AT6SF5F2rvJcFGGkOMGn79cUnjkStcq20NMiDpAIUlRd1U1OcKvADjs%2B6MFjV0nsw6i%2B0Lfnggqsf%0A0PgUe9Z25oWzy%2BuWA%2Fwzvz7fcUoaxQAgrnrlAJuoFb1vudUCL1HRnfstmL7WQQ%3D%3D&amp;ddkey=:TrackOrderStatus" class="language-link" hreflang="ar" data-drupal-link-system-path="api/headerfooter/empty" onclick="addURL(this)">العربية</a></li></ul>     </section>    </div>            </div>           <div id="hubs-menu-mobile">               <span class="active-hub"></span>               <div class="list-hubs">                   <div class="region region-hubs-menu">     <nav role="navigation" aria-labelledby="block-mobilehubs-menu" id="block-mobilehubs">                <h2 class="visually-hidden" id="block-mobilehubs-menu">mobile hubs</h2>                            <ul class="menu nav">                       <li class="menu-icon-332">         <a href="://inwi.ma/" target="" data-drupal-link-system-path="node/17">particuliers</a>                   </li>                   <li class="menu-icon-330">         <a href="://inwi.ma/entreprises" target="" data-drupal-link-system-path="node/
+228">entreprises</a>                   </li>                   <li class="menu-icon-331">         <a href="://inwi.ma/fun" target="" data-drupal-link-system-path="node/6571">fun</a>                   </li>                   <li class="menu-icon-329">         <a href="://inwi.ma/corporate" target="" data-drupal-link-system-path="node/15">corporate</a>                   </li>         </ul>        </nav>    </div>                </div>             </div>           <div id="search-section-mobile">               <div class="region region-search-mobile">     <section id="block-smart-searchblock-5" class="block">                          <div class="col-md-4 search-top">     <form class="smartsearch" data-drupal-selector="smartsearch" action="/search/espace" method="get" id="smartsearch" accept-charset="UTF-8">   <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-smart-search js-form-item-smart-search form-no-label form-group">         <input autocomplete="off" placeholder="Rechercher" data-drupal-selector="edit-smart-search" class="form-text required form-control" id="edit-smart-search" name="smart_search" size="60" maxlength="128" required="required" aria-required="true" type="text">       </div> <input autocomplete="off" data-drupal-selector="form-xxfmjwnkjsrtz68bwbpm25znkplsdzinynswlxu67o" name="form_build_id" value="form-_xXfmjWNKJSRtz68BwbpM25znKpLSdzINyNsWLXu67o" id="form-_xXfmjWNKJSRtz68BwbpM25znKpLSdzINyNsWLXu67o" type="hidden"><input data-drupal-selector="edit-smartsearch" name="form_id" value="smartsearch" id="edit-smartsearch" type="hidden"> </form>  </div> <div class="ac-items" style="display: none; margin-top: 0px;"><div class="list-group" id="my_ac"></div></div> <div class="ht-items clearfix" style="display:none;" id="historique">     <div class="bandeau"></div>     <div class="historique-container">         <div class="container">             <div class="col-md-8 items-header-right">                                                 <h2>Historique</
+h2>                 <h4>Vos recherches sur inwi.ma</h4>             </div>             <div class="col-md-4 items-header-left">                                                 <h2>Top 5</h2>                 <h4>des recherches sur inwi</h4>             </div>         </div>     </div>     <div class="container list-items-container">         <div class="col-md-8 list-right">             <ul class="items">                             </ul>         </div>         <div class="col-md-4 list-left">             <ul class="items">                                     <li class="list-item">                         <a href="://inwi.ma/mobile/services/facebook-0">                             <span class="item-tag-up pull-right">Portail</span>                             <h5 class="item-right-title">0.Facebook | Portail inwi</h5>                             <p></p>                         </a>                     </li>                                     <li class="list-item">                         <a href="://inwi.ma/mobile/recharges">                             <span class="item-tag-up pull-right">Portail</span>                             <h5 class="item-right-title">Cartes de recharge | Porta</h5>                             <p></p>                         </a>                     </li>                                     <li class="list-item">                         <a href="://club.inwi.ma/descriptif-illustre.html">                             <span class="item-tag-up pull-right">Club inwi</span>                             <h5 class="item-right-title">Club inwi</h5>                             <p>                        Découvrez le club inwi    </p>                         </a>                     </li>                                     <li class="list-item">                         <a href="://inwi.ma/mobile/services/portail-jeux">                             <span class="item-tag-up pull-right">Portail</span>                             <h5 class="item-right-title">Portail jeux | 
+Portail inw</h5>                             <p></p>                         </a>                     </li>                                     <li class="list-item">                         <a href="://la3bin.inwi.ma/mentions-legales">                             <span class="item-tag-up pull-right">La3bin</span>                             <h5 class="item-right-title">La3bin</h5>                             <p>                                      inwi La3b'in</p>                         </a>                     </li>                             </ul>         </div>     </div> </div>      </section>    </div>            </div>         </div>         <div id="navbar-mobile">               <div class="menu-header">                 <span class="navbar-panier"></span><span class="navbar-compte"></span><span class="close-navbar glyphicon glyphicon-remove"></span>               </div>           <div id="widget-items-mobile">               <div class="region region-mobile-widgets">     <section id="block-cartinfoblock-2" class="block">                                   <div class="menu-off pastille-is-empty">         <span class="before-triangle"></span>         <div class="hidden-menu-content">             <div class="connect-hidden-menu">                 <a href="#" class="btn btn-primary connect-button-hidden">Connectez-vous</a>             </div>         </div>     </div> <div class="account-menu-off">     <span class="before-triangle"></span>     <div class="account-info-hidden">
+                                                                        
+                                                                      <h3>Connectez-vous</h3>                     <h4 class="list-menu-title">Espace client</h4>                 <ul>                          <li><a href="://myinwi.ma/" target="_blank">my inwi<span>&gt;</span></a></li>             <li><a href="://boutique.inwi.ma/webapp/wcs/stores/servlet/TrackOrderStatus?catalogId=10001&amp;langId=-2&amp;storeId=10151" target="_blank">Suivi de commande<span>&gt;</span></a></li>                 </ul>             <h4 class="list-menu-title">Fidélité</h4>         <ul>                      <li><a href="://club.inwi.ma/" target="_blank">Club inwi<span>&gt;</span></a></li>             <li><a href="://boutique.inwi.ma/webapp/wcs/stores/servlet/LogonForm?catalogId=10001&amp;storeId=11651&amp;langId=-2&amp;krypto=i2N%2F8E1jjWaSKjngq%2Brns7%2BsD5SHAHn1jj5a5jgzbLFojcKidsftvLmyBzwFXgKD&amp;ddkey=:reengagement/mon-compte" target="_blank">Changer mon mobile<span>&gt;</span></a></li>         </ul>     </div> </div>      </section>    </div>            </div>                 <div class="region region-header-mobile">     <nav role="navigation" aria-labelledby="block-inmenu-menu" id="block-inmenu">                       <ul class="nav navbar-nav">                                                 <li class="menu-icon-142 has-mega-menu mega-menu-item mega-menu-parent-item mega-menu-item-current">           <a href="://inwi.ma/" target="" data-drupal-link-system-path="&lt;front&gt;">particuliers<span></span></a>                                           <div class="sub-menu">         <ul class="navbar-nav nav container">           <li class="sub-logo"><span class="logo-sub-menu"></span></li>                                       <li class="mega-menu-item">         <a href="://inwi.ma/mobile" target="" data-drupal-link-system-path="node/103">Mobile<span></span></a>                                   <div class="mega-sub-menu">         <div class="container">                                       
+<ul class="col-md-4">           <li class="dropdown-header">           <a class="rejoignez" target="" data-drupal-link-system-path="&lt;front&gt;">Nos offres</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a href="://inwi.ma/mobile/sans-abonnement/tictac" target="" data-drupal-link-system-path="node/5252">Offres sans abonnement</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="://inwi.ma/mobile/forfaits-illimites" target="" data-drupal-link-system-path="node/106">Forfaits</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="://inwi.ma/mobile/services/portabilite" target="" data-drupal-link-system-path="node/29347">Portabilité</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="://boutique.inwi.ma/boutique/telephones-mobiles?param=menu" class="is_fr" target="">Catalogue Téléphones</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="://boutique.inwi.ma/boutique/telephones-mobiles-ar" class="is_ar" target="">قائمة الهواتف النقالة</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="://inwi.ma/mobile/roaming" target="" data-drupal-link-system-path="node/6637">Roaming</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="://inwi.ma/mobile/services" target="" data-drupal-link-system-path="node/6650">Services</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="://inwi.ma/mobile/recharges" target="" data-drupal-link-system-path="node/6632">Recharges</a>                 
+  </li>                     </ul>                    </li>             </ul>                                     <ul class="col-md-4">           <li class="dropdown-header">           <a href="://espaceclient.inwi.ma/" class="dejaclient" target="_blank">Déjà Client</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a href="://myinwi.ma/" target="_blank">Gérez votre ligne</a>                                                                 </li><li>             <a href="://inwi.ma/myinwi" target="" data-drupal-link-system-path="node/27151">L'application My inwi</a>                   </li>                                       <li>             <a href="://myinwi.ma/" target="_blank">Suivez votre consommation</a>                   </li>                                       <li>             <a href="://rechargeonline.inwi.ma/rel/identification" target="_blank">Rechargez votre compte</a>                   </li>                                       <li>             <a href="://factureonline.inwi.ma/PFEL/init" target="_blank">Payez votre facture</a>                   </li>                                                                   <li class="mega-menu-item-has-children">           <a href="://inwi.ma/fidelite" target="_blank">Programme de Fidélité</a>                                                                 </li><li>             <a href="://boutique.inwi.ma/changermonmobile/mon-compte" target="">Changer mon mobile</a>                   </li>                                       <li>             <a href="://club.inwi.ma/" target="_blank">Club inwi</a>                   </li>                                                   </ul>                    </li>             </ul>                     <div class="col-sm-4 col-xs-12 hidden-xs pub-menu hidden-sm" id="pub-menu">       </div>         </div>       </div>                    </li>                              
+       <li class="mega-menu-item">         <a href="://inwi.ma/internet" target="" data-drupal-link-system-path="node/4574">Internet et fixe<span></span></a>                                   <div class="mega-sub-menu">         <div class="container">                                       <ul class="col-md-4">           <li class="dropdown-header">           <a class="rejoignez" target="" data-drupal-link-system-path="&lt;front&gt;">Nos offres</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a href="://inwi.ma/fibre-optique" target="" data-drupal-link-system-path="node/15700">Fibre optique</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="://inwi.ma/internet/idar/adsl" target="" data-drupal-link-system-path="node/189">ADSL</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="://boutique.inwi.ma/webapp/wcs/stores/servlet/CategoryDisplay?categoryId=18501&amp;langId=-2&amp;storeId=10151&amp;catalogId=10001" class="is_fr" target="">idar duo</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="://boutique.inwi.ma/boutique/idar-duo-ar" class="is_ar" target="">idar duo</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a target="" data-drupal-link-system-path="&lt;front&gt;">idar sans abonnement</a>                                                                 </li><li>             <a href="://inwi.ma/internet/idar-3g-plus-sans-abonnement" target="" data-drupal-link-system-path="node/4595">Internet 3G+</a>                   </li>                                       <li>             <a href="://inwi.ma/internet/idar-4g-sans-abonnement" target="" data-drupal-link-system-path="node/4596"
+>Internet 4G</a>                   </li>                                                                   <li class="mega-menu-item-has-children">           <a href="://boutique.inwi.ma/boutique/offres-internet-4g-avec-abonnement?param=menu" target="">idar avec abonnement </a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="://inwi.ma/internet/services" target="" data-drupal-link-system-path="node/177">Services</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="://inwi.ma/internet/wifi7dak" target="" data-drupal-link-system-path="node/175">Wifi7dak</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="://inwi.ma/fixe/offres/sans-abonnement" target="" data-drupal-link-system-path="node/6680">Offres fixe</a>                   </li>                     </ul>                    </li>             </ul>                                     <ul class="col-md-4">           <li class="dropdown-header">           <a href="://espaceclient.inwi.ma/" class="dejaclient" target="_blank">Déjà Client</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a href="://myinwi.ma/" target="_blank">Gérez votre ligne</a>                                                                 </li><li>             <a href="://inwi.ma/myinwi" target="" data-drupal-link-system-path="node/27151">L'application My inwi</a>                   </li>                                       <li>             <a href="://myinwi.ma/" target="_blank">Suivez votre consommation</a>                   </li>                                       <li>             <a href="://rechargeonline.inwi.ma/rel/identification" target="_blank">Rechargez votre compte</a>                   </li>                         
+              <li>             <a href="://factureonline.inwi.ma/PFEL/init" target="_blank">Payez votre facture</a>                   </li>                                                                   <li class="mega-menu-item-has-children">           <a href="://inwi.ma/fidelite" target="_blank">Programme de Fidélité</a>                                                                 </li><li>             <a href="://boutique.inwi.ma/changermonmobile/mon-compte" target="">Changer mon mobile</a>                   </li>                                       <li>             <a href="://club.inwi.ma/" target="_blank">Club inwi</a>                   </li>                                                   </ul>                    </li>             </ul>                     <div class="col-sm-4 col-xs-12 hidden-xs pub-menu hidden-sm" id="pub-menu">       </div>         </div>       </div>                    </li>                                     <li class="mega-menu-item">         <a target="" data-drupal-link-system-path="&lt;front&gt;">Bons plans<span></span></a>                                   <div class="mega-sub-menu">         <div class="container">                                       <ul class="col-md-4">           <li class="dropdown-header">           <a class="rejoignez" target="" data-drupal-link-system-path="&lt;front&gt;">Bons plans</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a href="://inwi.ma/bons-plans/deals" target="" data-drupal-link-system-path="bons-plans/deals">Exclusivités web</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="://inwi.ma/bons-plans/offres-et-promos" target="" data-drupal-link-system-path="bons-plans/offres-et-promos">Offres et promotions</a>                   </li>                     </ul>                    </li>             </ul>                       
+              <ul class="col-md-4">           <li class="dropdown-header">           <a href="://espaceclient.inwi.ma/" class="dejaclient" target="_blank">Déjà Client</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a href="://inwi.ma/fidelite" target="_blank">Programme de Fidélité</a>                                                                 </li><li>             <a href="://accounts.inwi.ma/login?service=%3A%2F%2Fboutique.inwi.ma%2Fchangermonmobile%2Fmon-compte" target="">Changer mon mobile</a>                   </li>                                       <li>             <a href="://club.inwi.ma/" target="_blank">Club inwi</a>                   </li>                                                   </ul>                    </li>             </ul>                     <div class="col-sm-4 col-xs-12 hidden-xs pub-menu hidden-sm" id="pub-menu">       </div>         </div>       </div>                    </li>                                     <li class="mega-menu-item">         <a href="://inwi.ma/assistance" target="" data-drupal-link-system-path="node/188">Assistance<span></span></a>                                   <div class="mega-sub-menu">         <div class="container">                                       <ul class="col-md-4">           <li class="dropdown-header">           <a href="://inwi.ma/assistance/faq" class="rejoignez" target="" data-drupal-link-system-path="node/185">FAQ par thème</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">Particuliers_Assistance_Gauche_Invisible</a>                                                                 </li><li>             <a href="://inwi.ma/assistance/faq/mobile/abonnement" target="" data-drupal-link-system-path="assistance/faq/
+mobile/abonnement">Mobile avec abonnement</a>                   </li>                                       <li>             <a href="://inwi.ma/assistance/faq/mobile/sans-abonnement" target="" data-drupal-link-system-path="assistance/faq/mobile/sans-abonnement">Mobile sans abonnement</a>                   </li>                                       <li>             <a href="://inwi.ma/assistance/faq/internet-et-fixe" target="" data-drupal-link-system-path="assistance/faq/internet-et-fixe">Internet et fixe</a>                   </li>                                       <li>             <a href="://inwi.ma/assistance/faq/services-et-parametrage" target="" data-drupal-link-system-path="assistance/faq/services-et-parametrage">Services et paramétrage</a>                   </li>                                       <li>             <a href="://inwi.ma/assistance/faq/boutique-en-ligne" target="" data-drupal-link-system-path="assistance/faq/boutique-en-ligne">Boutique en ligne</a>                   </li>                                                   </ul>                    </li>             </ul>                                     <ul class="col-md-4">           <li class="dropdown-header">           <a class="rejoignez" target="" data-drupal-link-system-path="&lt;front&gt;">Urgences</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">Particuliers_Assistance_Centre_Invisible</a>                                                                 </li><li>             <a href="://inwi.ma/assistance/urgences#faq-particuliers-urgences-t%C3%A9l%C3%A9phone-vol%C3%A9" target="" data-drupal-link-system-path="assistance/urgences">Mobile perdu/ volé</a>                   </li>                                       <li>             <a href="://inwi.ma/assistance/urgences#faq-particuliers-urgences-carte-
+bloqu%C3%A9e" target="" data-drupal-link-system-path="assistance/urgences">Carte SIM bloquée</a>                   </li>                                       <li>             <a href="://inwi.ma/assistance/urgences#faq-particuliers-urgences-espace-client" target="" data-drupal-link-system-path="assistance/urgences">Activer son compte / Mot de passe oublié</a>                   </li>                                       <li>             <a href="://inwi.ma/assistance/nous-contacter" target="" data-drupal-link-system-path="node/5168">Nous contacter</a>                   </li>                                       <li>             <a href="#chat" target="_blank" data-drupal-link-system-path="&lt;front&gt;">Tchat</a>                   </li>                                       <li>             <a href="://inwi.ma/agences" target="_self" title="Agences" data-drupal-link-system-path="agences">Nos agences</a>                   </li>                                                   </ul>                    </li>             </ul>                     <div class="col-sm-4 col-xs-12 hidden-xs pub-menu hidden-sm" id="pub-menu">       </div>         </div>       </div>                    </li>                       </ul>       </div>                    </li>                                               <li class="menu-icon-201 has-mega-menu mega-menu-item mega-menu-parent-item">           <a href="://inwi.ma/entreprises" target="" data-drupal-link-system-path="node/228">entreprises<span></span></a>                                           <div class="sub-menu">         <ul class="navbar-nav nav container">           <li class="sub-logo"><span class="logo-sub-menu"></span></li>                                       <li class="mega-menu-item">         <a target="" data-drupal-link-system-path="&lt;front&gt;">Fixe &amp; Connectivité Critique<span></span></a>                                   <div class="mega-sub-menu">         <div class="container">                                      
+ <ul class="col-md-4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">invisible</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a target="" data-drupal-link-system-path="&lt;front&gt;">Business Connect</a>                                                                 </li><li>             <a href="://inwi.ma/entreprises/fibre-pro" target="" data-drupal-link-system-path="node/27188">Fibre Pro</a>                   </li>                                       <li>             <a href="://inwi.ma/entreprises/internet/offres-combinees/business-connect" target="" data-drupal-link-system-path="node/6751">Business Connect 4G</a>                   </li>                                       <li>             <a href="://inwi.ma/entreprises/internet/offres-combinees/business-connect/adsl" target="" data-drupal-link-system-path="node/13685">Business Connect Adsl</a>                   </li>                                       <li>             <a href="://inwi.ma/entreprises/internet/offres-combinees/business-connect-fixe" target="" data-drupal-link-system-path="node/13508">Business Connect Fixe</a>                   </li>                                                                   <li class="mega-menu-item-has-children">           <a target="" data-drupal-link-system-path="&lt;front&gt;">Offres combinées</a>                                                                 </li><li>             <a href="://inwi.ma/entreprises/internet/offres-combinees/double-play" target="" data-drupal-link-system-path="node/214">Double play</a>                   </li>                                       <li>             <a href="://inwi.ma/entreprises/internet/haut-debit" target="" data-drupal-link-system-path="node/218">Internet Haut Débit</a>                   </li>                                       
+<li>             <a href="://inwi.ma/entreprises/internet/vsat" target="" data-drupal-link-system-path="node/6822">inwi Business Sat</a>                   </li>                                                   </ul>                    </li>             </ul>                                     <ul class="col-md-4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">invisible</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a target="" data-drupal-link-system-path="&lt;front&gt;">Connectivité </a>                                                                 </li><li>             <a href="://inwi.ma/entreprises/data/connectivite/lan-to-lan" target="" data-drupal-link-system-path="node/220">Lan to Lan</a>                   </li>                                       <li>             <a href="://inwi.ma/entreprises/data/connectivite/ip-vpn-mpls" target="" data-drupal-link-system-path="node/6634">IP VPN MPLS</a>                   </li>                                       <li>             <a href="://inwi.ma/entreprises/data/connectivite/liaisons_louees-internationales" target="" data-drupal-link-system-path="node/221">Liaisons louées internationales</a>                   </li>                                       <li>             <a href="://inwi.ma/entreprises/data/nom-de-domaine" target="" data-drupal-link-system-path="node/7017">Nom de domaine</a>                   </li>                                                   </ul>                    </li>             </ul>                     <div class="col-sm-4 col-xs-12 hidden-xs pub-menu hidden-sm" id="pub-menu">       </div>         </div>       </div>                    </li>                                     <li class="mega-menu-item">         <a target="" data-drupal-link-system-path="&lt;front&gt;">Mobilité &amp; IoT<span></span></a>       
+                            <div class="mega-sub-menu">         <div class="container">                                       <ul class="col-md-4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;"> -</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a target="" data-drupal-link-system-path="&lt;front&gt;">Offres mobiles</a>                                                                 </li><li>             <a href="://inwi.ma/entreprises/offres-mobiles/smartphones-du-moment" target="" data-drupal-link-system-path="node/27548">Smartphones du moment</a>                   </li>                                       <li>             <a href="://inwi.ma/entreprises/mobile/solutions/open-plus" target="" data-drupal-link-system-path="node/208">Forfaits Open+</a>                   </li>                                       <li>             <a href="://inwi.ma/entreprises/mobile/solutions/forfaits-illimites" target="" data-drupal-link-system-path="node/93">Forfaits illimités</a>                   </li>                                                   </ul>                    </li>             </ul>                                     <ul class="col-md-4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">invisible</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a target="" data-drupal-link-system-path="&lt;front&gt;">Services</a>                                                                 </li><li>             <a href="://inwi.ma/entreprises/mobile/services/convertin" target="" data-drupal-link-system-path="node/6796">Convert'in</a>                   </li>                                       <li>             <a href="://inwi.ma/
+entreprises/mobile/services/options-et-pass" target="" data-drupal-link-system-path="node/102">Options et Pass</a>                   </li>                                       <li>             <a href="://inwi.ma/entreprises/mobile/services/roaming" target="" data-drupal-link-system-path="node/210">Roaming </a>                   </li>                                                                   <li class="mega-menu-item-has-children">           <a href="://inwi.ma/entreprises/mobile/programme-de-fidelite" target="" data-drupal-link-system-path="node/6587">Programme de fidélité</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a target="" data-drupal-link-system-path="&lt;front&gt;">IoT</a>                                                                 </li><li>             <a href="://inwi.ma/entreprises/data/machine-to-machine" target="" data-drupal-link-system-path="node/4580">M2M by inwi Business</a>                   </li>                                       <li>             <a href="://inwi.ma/entreprises/mobile/services/mobile-device-management" target="" data-drupal-link-system-path="node/6844">Mobile Device Management</a>                   </li>                                                   </ul>                    </li>             </ul>                                     <ul class="col-md-4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">invisible</a>                   </li>             </ul>                     <div class="col-sm-4 col-xs-12 hidden-xs pub-menu hidden-sm" id="pub-menu">       </div>         </div>       </div>                    </li>                                     <li class="mega-menu-item">         <a target="" data-drupal-link-system-path="&lt;front&gt;">Cloud<span></span></a>                                   <div class="mega-sub-menu">         <div class="container">                   
+                    <ul class="col-md-4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">-</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a href="://inwi.ma/entreprises/Le-Cloud-inwi-Business" target="" data-drupal-link-system-path="node/25264">Le Cloud inwi Business</a>                                                                 </li><li>             <a href="://inwi.ma/entreprises/inwi-Business-datacenters" target="" data-drupal-link-system-path="node/25265">inwi Business datacenters</a>                   </li>                                       <li>             <a href="://inwi.ma/entreprises/inwi-Business-Cloud" target="" data-drupal-link-system-path="node/29315">inwi Business Cloud</a>                   </li>                                                   </ul>                    </li>             </ul>                     <div class="col-sm-4 col-xs-12 hidden-xs pub-menu hidden-sm" id="pub-menu">       </div>         </div>       </div>                    </li>                                     <li class="mega-menu-item">         <a href="://inwi.ma/entreprises/inwi-Cyber-Defense-votre-rempart-contre-les-menaces-du-Net" target="">Sécurité<span></span></a>                                   <div class="mega-sub-menu">         <div class="container">                                       <ul class="col-md-4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">-</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a href="://inwi.ma/entreprises/inwi-cyber-defense" target="" data-drupal-link-system-path="node/23377">inwi Cyberdéfense</a>                                                                 </li><li>         
+    <a href="://inwi.ma/entreprises/SOC-inwi-Business" target="" data-drupal-link-system-path="node/24737">SOC inwi Business</a>                   </li>                                       <li>             <a href="://inwi.ma/entreprises/Business-Protect" target="" data-drupal-link-system-path="node/24738">Business Protect</a>                   </li>                                       <li>             <a href="://inwi.ma/entreprises/Managed-Anti-DDoS" target="" data-drupal-link-system-path="node/24739">Managed Anti-DDoS</a>                   </li>                                                   </ul>                    </li>             </ul>                     <div class="col-sm-4 col-xs-12 hidden-xs pub-menu hidden-sm" id="pub-menu">       </div>         </div>       </div>                    </li>                                     <li class="mega-menu-item">         <a target="" data-drupal-link-system-path="&lt;front&gt;">Nous connaître<span></span></a>                                   <div class="mega-sub-menu">         <div class="container">                                       <ul class="col-md-4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">Entreprises_nousconnaitre_Gauche_invisible</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a href="://inwi.ma/entreprises/nous-connaitre/inwi-business" target="" data-drupal-link-system-path="node/6589">inwi Business</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="://inwi.ma/entreprises/agences" target="" data-drupal-link-system-path="entreprises/agences">Points de vente</a>                   </li>                     </ul>                    </li>             </ul>                                     <ul class="col-md-4">           <li class="dropdown-header"> 
+          <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">Entreprises_nousconnaitre_Centre_invisible</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a href="://inwi.ma/entreprises/nous-connaitre/nos-clients" target="" data-drupal-link-system-path="node/6569">Nos clients</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="://inwi.ma/entreprises/mon-entreprise-connectee" target="" data-drupal-link-system-path="node/6910">mon entreprise connectée</a>                   </li>                     </ul>                    </li>             </ul>                     <div class="col-sm-4 col-xs-12 hidden-xs pub-menu hidden-sm" id="pub-menu">       </div>         </div>       </div>                    </li>                       </ul>       </div>                    </li>                                               <li class="menu-icon-30 has-mega-menu mega-menu-item mega-menu-parent-item">           <a href="://inwi.ma/fun" target="" data-drupal-link-system-path="node/6571">fun<span></span></a>                                           <div class="sub-menu">         <ul class="navbar-nav nav container">           <li class="sub-logo"><span class="logo-sub-menu"></span></li>                                       <li class="mega-menu-item">         <a href="://la3bin.inwi.ma/" target="_blank">Se divertir ?</a>                   </li>                                     <li class="mega-menu-item">         <a href="://emadrassa.inwi.ma/" class="is_fr" target="_blank">Apprendre ?</a>                   </li>                                     <li class="mega-menu-item">         <a href="://emadrassa.inwi.ma/ar" class="is_ar" target="">نستافدو؟</a>                   </li>                                     <li class="mega-menu-item">         <a href="://diriddik.ma/" class="is_fr" 
+target="_blank">S'entraider ?</a>                   </li>                                     <li class="mega-menu-item">         <a href="://diriddik.ma/ar" class="is_ar" target="">نتعاونو؟</a>                   </li>                                     <li class="mega-menu-item">         <a href="://inwi.ma/bons-plans" target="_self" data-drupal-link-system-path="node/3110">Profiter de nos bons plans</a>                   </li>                       </ul>       </div>                    </li>                                               <li class="menu-icon-192 has-mega-menu mega-menu-item mega-menu-parent-item">           <a href="://inwi.ma/corporate" target="" data-drupal-link-system-path="node/15">corporate<span></span></a>                                           <div class="sub-menu">         <ul class="navbar-nav nav container">           <li class="sub-logo"><span class="logo-sub-menu"></span></li>                                       <li class="mega-menu-item">         <a target="" data-drupal-link-system-path="&lt;front&gt;">Tout sur inwi<span></span></a>                                   <div class="mega-sub-menu">         <div class="container">                                       <ul class="col-md-4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">découvrezrinwi_toutsurinwi_Gauche_invisible</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a href="://inwi.ma/corporate/inwi-en-bref" target="" data-drupal-link-system-path="node/4460">inwi en bref </a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="://inwi.ma/corporate/bien-etre" target="" data-drupal-link-system-path="node/28347">Bien-être</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="
+://inwi.ma/corporate/Gaming" target="" data-drupal-link-system-path="node/28346">Gaming</a>                   </li>                     </ul>                    </li>             </ul>                                     <ul class="col-md-4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">découvrezrinwi_toutsurinwi_Centre_invisible</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a href="://inwi.ma/corporate/inwi-en-chiffres" target="" data-drupal-link-system-path="node/4465">inwi en chiffres</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="://inwi.ma/corporate/innovation" target="" data-drupal-link-system-path="node/4547">Innovation et entrepreneuriat</a>                                                                 </li><li>             <a href="://inwi.ma/corporate/innovation/particuliers" target="" data-drupal-link-system-path="node/5262">Marché des particuliers</a>                   </li>                                       <li>             <a href="://inwi.ma/corporate/innovation/entreprises" target="" data-drupal-link-system-path="node/5446">Marché des entreprises</a>                   </li>                                       <li>             <a href="://inwi.ma/corporate/innovation-et-entrepreneuriat/entrepreneuriat" target="" data-drupal-link-system-path="node/27491">Entrepreneuriat</a>                   </li>                                                                   <li class="mega-menu-item-has-children">           <a href="://inwi.ma/corporate/reseau" target="" data-drupal-link-system-path="node/6576">Couverture réseau</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="://inwi.ma/corporate/agences" 
+target="" data-drupal-link-system-path="corporate/agences">Agences inwi</a>                   </li>                     </ul>                    </li>             </ul>                     <div class="col-sm-4 col-xs-12 hidden-xs pub-menu hidden-sm" id="pub-menu">       </div>         </div>       </div>                    </li>                                     <li class="mega-menu-item">         <a target="" data-drupal-link-system-path="&lt;front&gt;">Responsabilité sociale<span></span></a>                                   <div class="mega-sub-menu">         <div class="container">                                       <ul class="col-md-4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">découvrezinwi_responsabilitésociale_Gauche_invisible</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a href="://inwi.ma/corporate/notre-politique-rse" target="" data-drupal-link-system-path="node/6580">Notre politique RSE</a>                                                                 </li><li>             <a href="://inwi.ma/corporate/volontariat" target="" data-drupal-link-system-path="node/4481">Volontariat</a>                   </li>                                       <li>             <a href="://inwi.ma/corporate/education" target="" data-drupal-link-system-path="node/4478">Education</a>                   </li>                                       <li>             <a href="://inwi.ma/corporate/notre-politique-rse/soutien-a-l-entrepreneuriat" target="" data-drupal-link-system-path="node/27507">Soutien à l'Entrepreneuriat</a>                   </li>                                                                   <li class="mega-menu-item-has-children">           <a href="://inwi.ma/corporate/environnement" target="">Protection de l’environnement</a>                   </li>                     </
+ul>                    </li>             </ul>                                     <ul class="col-md-4">           <li class="dropdown-header">           <a class="invisible" target="" data-drupal-link-system-path="&lt;front&gt;">découvrezinwi_responsabilitésociale_Centre_invisible</a>                                   <ul class="menu">                                       <li class="mega-menu-item-has-children">           <a href="://inwi.ma/corporate/protection-des-donnees" target="" data-drupal-link-system-path="node/4483">Protection des données</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="://inwi.ma/corporate/protection-des-enfants" target="" data-drupal-link-system-path="node/6578">Protection des enfants</a>                   </li>                                     <li class="mega-menu-item-has-children">           <a href="://inwi.ma/corporate/mobile-et-sante" target="" data-drupal-link-system-path="node/4482">Mobile et santé</a>                   </li>                     </ul>                    </li>             </ul>                     <div class="col-sm-4 col-xs-12 hidden-xs pub-menu hidden-sm" id="pub-menu">       </div>         </div>       </div>                    </li>                                     <li class="mega-menu-item">         <a href="://linkedin.com/company/inwi/" target="_blank">Carrières</a>                   </li>                                     <li class="mega-menu-item">         <a target="" data-drupal-link-system-path="&lt;front&gt;">Espace Presse<span></span></a>                                   <div class="mega-sub-menu">         <div class="container">                                       <ul class="col-md-4">           <li class="dropdown-header">           <a href="://inwi.ma/corporate/communiques" target="" data-drupal-link-system-path="node/3123">Communiqués de presse</a>                   </li>             </ul>                         
+            <ul class="col-md-4">           <li class="dropdown-header">           <a href="://inwi.ma/presse" target="" data-drupal-link-system-path="presse">Revue de presse</a>                   </li>             </ul>                     <div class="col-sm-4 col-xs-12 hidden-xs pub-menu hidden-sm" id="pub-menu">       </div>         </div>       </div>                    </li>                       </ul>       </div>                    </li>                     </ul>         <div class="mega-menu-overlay"></div>    </nav>    </div>          </div>         <div class="overlay-mobile"></div>       </div>                   <div class="topbar" role="heading">         <div class="container">             <div class="region region-header container">     <section id="block-smart-searchblock-4" class="block">                          <div class="col-md-4 search-top">     <form class="smartsearch" data-drupal-selector="smartsearch-2" action="/search/espace" method="get" id="smartsearch--2" accept-charset="UTF-8">   <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-smart-search js-form-item-smart-search form-no-label form-group">         <input autocomplete="off" placeholder="Rechercher" data-drupal-selector="edit-smart-search" class="form-text required form-control" id="edit-smart-search--2" name="smart_search" size="60" maxlength="128" required="required" aria-required="true" type="text">       </div> <input autocomplete="off" data-drupal-selector="form-jbnzuwkmqf2ucfdxi6egko-xxqxzmebem2uxuhs-q5m" name="form_build_id" value="form-jBnZuwKMqF2ucfDXI6EGKO-XxqxZmEBeM2uXuHs-Q5M" id="form-jBnZuwKMqF2ucfDXI6EGKO-XxqxZmEBeM2uXuHs-Q5M" type="hidden"><input data-drupal-selector="edit-smartsearch-2" name="form_id" value="smartsearch" id="edit-smartsearch--2" type="hidden"> </form>  </div> <div class="ac-items" style="display: none; margin-top: 0px;"><div class="list-group" id="my_ac"></div></div> <div class="ht-items clearfix" style="display:none;" id="historique">     <div class="
+bandeau"></div>     <div class="historique-container">         <div class="container">             <div class="col-md-8 items-header-right">                                                 <h2>Historique</h2>                 <h4>Vos recherches sur inwi.ma</h4>             </div>             <div class="col-md-4 items-header-left">                                                 <h2>Top 5</h2>                 <h4>des recherches sur inwi</h4>             </div>         </div>     </div>     <div class="container list-items-container">         <div class="col-md-8 list-right">             <ul class="items">                             </ul>         </div>         <div class="col-md-4 list-left">             <ul class="items">                                     <li class="list-item">                         <a href="://inwi.ma/mobile/services/facebook-0">                             <span class="item-tag-up pull-right">Portail</span>                             <h5 class="item-right-title">0.Facebook | Portail inwi</h5>                             <p></p>                         </a>                     </li>                                     <li class="list-item">                         <a href="://inwi.ma/mobile/recharges">                             <span class="item-tag-up pull-right">Portail</span>                             <h5 class="item-right-title">Cartes de recharge | Porta</h5>                             <p></p>                         </a>                     </li>                                     <li class="list-item">                         <a href="://club.inwi.ma/descriptif-illustre.html">                             <span class="item-tag-up pull-right">Club inwi</span>                             <h5 class="item-right-title">Club inwi</h5>                             <p>                        Découvrez le club inwi    </p>                         </a>                     </li>                                     <li class="list-item">                         <a href="
+://inwi.ma/mobile/services/portail-jeux">                             <span class="item-tag-up pull-right">Portail</span>                             <h5 class="item-right-title">Portail jeux | Portail inw</h5>                             <p></p>                         </a>                     </li>                                     <li class="list-item">                         <a href="://la3bin.inwi.ma/mentions-legales">                             <span class="item-tag-up pull-right">La3bin</span>                             <h5 class="item-right-title">La3bin</h5>                             <p>                                      inwi La3b'in</p>                         </a>                     </li>                             </ul>         </div>     </div> </div>      </section>    </div>          </div>       </div>         </header><div class="overlay-header-widgets"></div></div><!-- script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.min.js"></script-->
+<!--script type="text/javascript" src="/wcsstore/InwiStorefrontAssetStore/javascript/inwi/less.min.js"></script-->
+<!--<script type="text/javascript" src="/wcsstore/InwiStorefrontAssetStore/javascript/inwi/inwietoil.js?v=2"></script>-->
+
+		
+		<div id="btq">
+		
+		
+<div class="grey-bg">
+    <div id="signup" class="container v-padding">
+	<div id="WC_AccountDisplay_div_3">
+		<div id="WC_AccountDisplay_div_4"></div>
+		<div class="col-md-8 col-md-offset-2 signup-process-container">
+		<div class="signup-process">
+		<div class="signup-heading text-center">
+                <h3>Le mot de passe est incorrect</h3>
+              </div>
+			
+			<div class="signup-body">
+			<div class="signIn-form show" id="WC_AccountDisplay_div_6">
+			
+					<input type="hidden" name="storeId" value="10151" id="WC_AccountDisplay_FormInput_storeId_In_Logon_1">
+					<input type="hidden" name="catalogId" value="10001" id="WC_AccountDisplay_FormInput_catalogId_In_Logon_1">
+					<input type="hidden" name="reLogonURL" value="LogonForm" id="WC_AccountDisplay_FormInput_reLogonURL_In_Logon_1">
+					<input type="hidden" name="myAcctMain" value="">
+					<input type="hidden" name="fromOrderId" value="*" id="WC_AccountDisplay_FormInput_fromOrderId_In_Logon_1">
+					<input type="hidden" name="toOrderId" value="." id="WC_AccountDisplay_FormInput_toOrderId_In_Logon_1">
+					<input type="hidden" name="deleteIfEmpty" value="*" id="WC_AccountDisplay_FormInput_deleteIfEmpty_In_Logon_1">
+					<input type="hidden" name="continue" value="1" id="WC_AccountDisplay_FormInput_continue_In_Logon_1">
+					<input type="hidden" name="createIfEmpty" value="1" id="WC_AccountDisplay_FormInput_createIfEmpty_In_Logon_1">
+					<input type="hidden" name="calculationUsageId" value="-1" id="WC_AccountDisplay_FormInput_calculationUsageId_In_Logon_1">
+					<input type="hidden" name="updatePrices" value="0" id="WC_AccountDisplay_FormInput_updatePrices_In_Logon_1">
+					<input type="hidden" name="errorViewName" value="AjaxOrderItemDisplayView" id="WC_AccountDisplay_FormInput_errorViewName_In_Logon_1">                                                 
+					<input type="hidden" name="previousPage" value="logon" id="WC_AccountDisplay_FormInput_previousPage_In_Logon_1">
+					<input type="hidden" name="returnPage" value="" id="WC_AccountDisplay_FormInput_returnPage_In_Logon_1">
+					
+									<input type="hidden" name="URL" value="TrackOrderStatus?catalogId=10001&amp;langId=-2&amp;storeId=10151" id="WC_AccountDisplay_FormInput_URL_In_Logon_2">
+								
+					<div id="WC_AccountDisplay_div_7">
+					
+	                                                            
+						
+						
+							<span class="errorMsg" id="logonId_errorMsg" style="display: none;"></span>
+						
+						
+						
+						
+							<span class="errorMsg" id="logonPassword_errorMsg" style="display: none;"></span>
+						
+	                                                                                                      
+						 
+	
+						<div id="WC_AccountDisplay_div_12">
+							 <a href="../index.html">	<button type="submit" name="cancel" class="btn btn-primary signIn-button" title="annuler" id="WC_AccountDisplay_links_2" onclick="javascript:submitSpecifiedForm(document.Logon);return false;">
+							 
+							 
+							 
+								annuler
+							</button>
+						</div>
+											
+					</div>
+				
+					
+					<div class="footer" id="WC_AccountDisplay_div_15">
+						<div class="left_corner" id="WC_AccountDisplay_div_16"></div>
+						<div class="left" id="WC_AccountDisplay_div_17"></div>
+						<div class="right_corner" id="WC_AccountDisplay_div_18"></div>
+					</div>
+				</form>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+</div>
+	<div class="before-footer infos">
+        <div class="before-footer--item">
+          <img src="INWI%20-%20Connexion_files/offer.png">
+          <span>Offres Exclusives</span>
+        </div>
+        <div class="before-footer--item">
+          <img src="INWI%20-%20Connexion_files/paiement.png">
+          <span>Paiement sécurisé</span>
+        </div>
+        <div class="before-footer--item">
+          <img src="INWI%20-%20Connexion_files/shipping.png">
+          <span>Livraison à domicile</span>
+        </div>
+      </div>
+	  
+	  </div>
+	  <div id="MessageArea" class="store_message modal fade in custom-dialog" role="alert" aria-labelledby="MessageArea_ACCE_Title" style="opacity: 100 !important;">
+<div id="delete-element" style="display:block">
+<div class="modal-dialog" id="modal-diagid">
+	<div id="msgpopup_content_wrapper" class="panel panel-primary" style="">
+		<div class="panel-heading">
+			<a id="clickableErrorMessageImg" role="button" class="close right" data-dismiss="modal" aria-hidden="true" title="Fermer" onclick="JavaScript:MessageHelper.hideMessageArea();$('.modal-backdrop.in').css('display','none');$('#MessageArea').css('display','none');">
+				<div class="close_text left">x</div>
+				<div class="close_icon left"></div>
+			</a>
+			<!--La demande de l'équipe prod on enlève le titre de pop up--><!--<h4 class="panel-title" id="voteLabel">Boîte de dialogue Message</h4>-->
+			<h4 class="panel-title" id="voteLabel">  </h4>
+		</div>
+		
+		
+		
+		<div class="modal-body container container-modal">
+			<!--  <img src="/wcsstore/InwiStorefrontAssetStore/img/deleteArticle.png">  -->
+		<!-- 
+			<div class="message_icon left">
+				<img id="error_icon" style="display:none;" class="error_icon" src="/wcsstore/InwiStorefrontAssetStore/images/colors/color1/error_icon.png" alt="Erreur" title="Erreur"/>
+				<img id="success_icon" style="display:none;" class="error_icon" src="/wcsstore/InwiStorefrontAssetStore/images/colors/color1/success_icon.png" alt="Succès" title="Succès"/>
+			</div>
+		-->
+			<div id="ErrorMessageText" class="alert alert-danger" role="alert" style="margin-bottom: 0; text-align: center;">
+					
+			</div>
+		</div>
+	        <div id="btn" class="modal-footer">
+
+				<a onclick="JavaScript:MessageHelper.hideMessageArea();$('.modal-backdrop.in').css('display','none');$('#MessageArea').css('display','none');" title="Annuler" role="button" class="btn btn-primary no-delete" data-dismiss="modal" id="WC_AjaxAddressBookForm_links_4">
+				  <div class="button_text">Annuler</div>						
+				</a>
+				<a href="#" role="button" class="btn btn-primary ok-delete-element" title="Valider" id="WC_AjaxAddressBookForm_links_4" onclick="javascript:CustomAddressBookFormJS.newDeleteAddressBis(addressIdToDelete,AddressDeleteURL,'');MessageHelper.hideMessageArea();$('.modal-backdrop.in').css('display','none');$('#MessageArea').css('display','none'); return false;">					
+					<div class="button_text">Valider</div>				
+				</a>
+
+             </div>
+
+
+		</div>
+	</div>
+	</div>
+<!--     Pour aficher le message de suppression de la page récap panier   -->
+	
+<div id="articleDelete" style="display:none">
+<div class="modal-dialog">
+	<div id="msgpopup_content_wrapper" class="panel panel-primary">
+		<div class="panel-heading">
+			<a id="clickableErrorMessageImg" role="button" class="close right" data-dismiss="modal" aria-hidden="true" title="Fermer" href="javascript:MessageHelper.hideMessageArea();">
+				<div class="close_text left">x</div>
+				<div class="close_icon left"></div>
+			</a>
+		<h4 class="panel-title" id="voteLabel">Supprimer l'article</h4>
+		</div>
+		
+		
+		
+		<div class="modal-body container container-modal">
+			<img src="INWI%20-%20Connexion_files/deleteArticle.png"> 
+			 <p>L'article a été retiré du panier.</p>
+			
+			
+		</div>
+	        <div id="btn" class="modal-footer">
+				<a href="#" role="button" class="btn btn-primary ok-delete" title="Valider" id="WC_AjaxAddressBookForm_links_4" onclick="javascript:CustomAddressBookFormJS.newDeleteAddressBis(addressIdToDelete,AddressDeleteURL,'');MessageHelper.hideMessageArea(); return false;">					
+					<div class="button_text">Valider</div>				
+				</a>
+
+             </div>
+
+
+		</div>
+	</div>
+	</div>
+	
+</div><div class="dijitDialog" tabindex="-1" wairole="dialog" waistate="labelledby-progress_bar_dialog_title" role="dialog" aria-labelledby="progress_bar_dialog_title" id="progress_bar_dialog" style="display: none; width: 56px; height: 56px; position: absolute;" widgetid="progress_bar_dialog" title="">
+	<div dojoattachpoint="titleBar" class="dijitDialogTitleBar">
+	<span dojoattachpoint="titleNode" class="dijitDialogTitle" id="progress_bar_dialog_title"></span>
+	<span dojoattachpoint="closeButtonNode" class="dijitDialogCloseIcon" dojoattachevent="onclick: onCancel" title="Annuler">
+		<span dojoattachpoint="closeText" class="closeText" title="Annuler">x</span>
+	</span>
+	</div>
+		<div dojoattachpoint="containerNode" class="dijitDialogPaneContent">
+	<div id="progress_bar">
+		<div id="loading_popup">
+			
+					<img src="INWI%20-%20Connexion_files/loading.gif" alt="Votre demande est en cours de traitement." title="Votre demande est en cours de traitement.">
+			       
+		</div>
+	</div>
+</div>
+</div><div class="dijitDialog" tabindex="-1" wairole="dialog" waistate="labelledby-cgvPopin_title" role="dialog" aria-labelledby="cgvPopin_title" id="cgvPopin" style="display: none; position: absolute;" widgetid="cgvPopin" title="">
+	<div dojoattachpoint="titleBar" class="dijitDialogTitleBar">
+	<span dojoattachpoint="titleNode" class="dijitDialogTitle" id="cgvPopin_title"></span>
+	<span dojoattachpoint="closeButtonNode" class="dijitDialogCloseIcon" dojoattachevent="onclick: onCancel" title="Annuler">
+		<span dojoattachpoint="closeText" class="closeText" title="Annuler">x</span>
+	</span>
+	</div>
+		<div dojoattachpoint="containerNode" class="dijitDialogPaneContent">
+											<div>
+				       						<div class="header">
+				           						<span>Conditions générales de vente</span>
+				           						<a class="close" href="javascript:void(0)" onclick="dijit.byId('cgvPopin').hide();" title="Fermer"></a>
+				           						<div class="clear_float"></div>
+				       						</div>
+				       					<div class="cgv_content">
+				       					
+						  					
+
+
+		
+										</div>
+									</div>
+						</div>
+</div></div>
+	  
+<div class="inwi_header_footer"><footer class="footer container-fluid" role="contentinfo">
+        <div class="container">
+            <div class="region region-footer">
+    <section id="block-pixelfb" class="block">
+    
+        
+
+          
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><!-- Facebook Pixel Code --><script>
+<!--//--><![CDATA[// ><!--
+
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '142733686504636');
+fbq('track', 'PageView');
+
+//--><!]]>
+</script><noscript>
+<img height="1" width="1" src="" /></noscript><!-- End Facebook Pixel Code --></div>
+      
+    </section>
+<section id="block-sendpulse" class="block">
+    
+        
+
+          
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><script charset="UTF-8" src="INWI%20-%20Connexion_files/78777f49f7cbd74de3c1413f6116a524_1.js" async=""></script></div>
+      
+    </section>
+<nav role="navigation" aria-labelledby="block-insocial-menu" id="block-insocial">
+      
+  <h2 id="block-insocial-menu">suivez-nous</h2>
+  
+
+        
+        <ul class="list-inline menu nav">
+            <li class="menu-icon-143">
+        <a href="://facebook.com/inwi.ma/" target="_blank"> </a>
+            </li>
+            <li class="menu-icon-57">
+        <a href="://twitter.com/inwi?lang=fr" target="_blank"> </a>
+            </li>
+            <li class="menu-icon-159">
+        <a href="://instagram.com/inwi_maroc/" target="_blank"> </a>
+            </li>
+            <li class="menu-icon-160">
+        <a href="://linkedin.com/company/inwi" target="_blank"> </a>
+            </li>
+            <li class="menu-icon-145">
+        <a href="://youtube.com/user/inwi" target="_blank"> </a>
+            </li>
+        </ul>
+  
+
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-infooter-menu" id="block-infooter">
+            
+  <h2 class="visually-hidden" id="block-infooter-menu">inFOOTER</h2>
+  
+
+        
+        <ul class="list-inline">
+            <li class="menu-icon-60">
+        <a href=":" target="" data-drupal-link-system-path="node/200">CGU</a>
+            </li>
+            <li class="menu-icon-274">
+        <a href=":f" target="">Brochure tarifaire particuliers</a>
+            </li>
+            <li class="menu-icon-235">
+        <a href="" target="" data-drupal-link-system-path="node/3108">Cookies</a>
+            </li>
+            <li class="menu-icon-59">
+        <a href="" target="" data-drupal-link-system-path="sitemap">Plan du site</a>
+            </li>
+            <li class="menu-icon-243">
+        <a href=":" target="" data-drupal-link-system-path="node/6576">Couverture réseau</a>
+            </li>
+            <li class="menu-icon-161">
+        <a href="" target="" data-drupal-link-system-path="node/5168">Contact</a>
+            </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+          <div class="copyright">INWI © <span class="logo_footer"></span>. Tous  droits réservés.</div>
+        </div>
+      </footer></div><!-- script portail inwi -->
+<script src="INWI%20-%20Connexion_files/btq.js"></script>
+
+		
+	<!-- script end -->
+
+<script>
+		$(document).ready(function(){
+			if($('.custom-dialog').length>0){
+				$('.custom-dialog').appendTo('#btq');
+			}
+			if($('.dijitDialog').length>0){
+				$('.dijitDialog').appendTo('#btq');
+			}
+			if($('#editAddressContentsPopup').length>0){
+				$('#editAddressContentsPopup').appendTo('#btq');
+			}
+			
+		});
+	</script>
+							<br clear="all">
+							<div class="ad" id="WC_AccountDisplay_div_31">
+								
+
+
+
+
+
+							</div>
+						</div>
+					
+	
+	<div class="footer_wrapper_position">
+		
+
+
+
+
+
+<div class="bloc_avantages">
+	<ul>
+		
+
+
+
+
+
+
+
+
+
+
+				<li>
+				 	
+						 <div class="visuel">
+						 	
+			            	<img alt="" title="" src="INWI%20-%20Connexion_files/Picto_delivery.png">
+			            	
+			             </div>
+			         
+					 
+					 <div class="info">
+					 	
+			           	    <span>Livraison à domicile</span>
+			           	    
+			        </div>
+          		</li>
+			
+
+
+
+
+
+				<li>
+				 	
+						 <div class="visuel">
+						 	
+			            	<img alt="" title="" src="INWI%20-%20Connexion_files/Picto_money.png">
+			            	
+			             </div>
+			         
+					 
+					 <div class="info">
+					 	
+			           	    <span>Offres Exclusives</span>
+			           	    
+			        </div>
+          		</li>
+			
+
+
+
+
+
+				<li>
+				 	
+						 <div class="visuel">
+						 	
+			            	<img alt="" title="" src="INWI%20-%20Connexion_files/Picto_secure.png">
+			            	
+			             </div>
+			         
+					 
+					 <div class="info">
+					 	
+			           	    <span>Paiement sécurisé</span>
+			           	    
+			        </div>
+          		</li>
+			
+	</ul>
+</div>	
+<div class="footer_wrapper" role="contentinfo">
+					
+			<div class="footer_content" id="footer_content">
+				
+				<div id="footer">
+					
+						<div class="footer_element_container right_border large">
+						    <a href="://boutique.inwi.ma/boutique/offres-mobiles?param=menu">
+							 <h2>Mobile</h2>
+							</a>
+							<ul>
+								
+										<li><a id="FooterHelpLink_1" href="">catalogue des téléphones</a></li>
+										
+									
+										<li><a id="FooterHelpLink_2" href="">Abonnement</a></li>
+										
+									
+										<li><a id="FooterHelpLink_3" href="">Zen</a></li>
+										
+									
+							</ul>
+							
+						</div>
+						
+						<div class="footer_element_container right_border large">
+						    <a href="://boutique.inwi.ma/boutique/offres-internet?param=menu">
+							 <h2>Internet</h2>
+							</a>
+							<ul>
+								
+										<li><a id="FooterHelpLink_1" href=""> Internet avec abonnement</a></li>
+										
+									
+										<li><a id="FooterHelpLink_2" href=""> Internet sans abonnement</a></li>
+										
+									
+							</ul>
+							
+						</div>
+						
+						<div class="footer_element_container right_border large">
+						    <a href="">
+							 <h2>Assistance</h2>
+							</a>
+							<ul>
+								
+										<li><a id="FooterHelpLink_1" href="">FAQ</a></li>
+										
+									
+										<li><a id="FooterHelpLink_2" href="">Trouver un point de vente</a></li>
+										
+									
+										<li><a id="FooterHelpLink_3" href="">Carte de couverture réseau</a></li>
+										
+									
+										<li><a id="FooterHelpLink_4" target="_blank" href="">Informations légales</a></li>
+										
+									
+									<li>	
+										
+										<a href="javascript:void(0)" onclick="dijit.byId('cgvPopin').show();" title="Conditions générales de vente">
+												Conditions générales de vente
+										</a>
+						
+									</li>
+									
+							</ul>
+							
+						</div>
+						
+						
+							
+					
+						<div class="footer_element_container right_border large">
+						    <a href="://boutique.inwi.ma/boutique/fixe-sans-abonnement?param=menu">
+							 <h2>Fixe</h2>
+							</a>
+							<ul>
+								
+							</ul>
+							
+						</div>
+						
+				
+					
+				</div>
+				<div class="fb_footer">
+					
+					<div id="fb-root"></div>
+					<fb:like-box href=""></fb:like-box>
+				</div>
+				
+				<div id="secure_payment">
+					<span>Nos partenaires</span>
+					<ul>
+						<li><img src="INWI%20-%20Connexion_files/mtc.jpg" alt="Maroc Telecommerce" title="Maroc Telecommerce"></li>
+						<li><img src="INWI%20-%20Connexion_files/cmi.jpg" alt="Centre Monétique Interbancaire" title="Centre Monétique Interbancaire"></li>
+						<li><img src="INWI%20-%20Connexion_files/mastercard.jpg" alt="MasterCard" title="MasterCard"></li>
+						<li><img src="INWI%20-%20Connexion_files/visa.jpg" alt="Visa" title="Visa"></li>						
+					</ul>
+				</div>	
+			</div>	
+	
+
+<script type="text/javascript">
+	dojo.addOnLoad(function() { 
+		
+		requestSubmitted = false;
+		
+		dojo.query('div[dojoType]').forEach(function(node, index, arr){
+			console.debug("Parse "+node.id);
+			addToWidgetsList(node.id);
+		});
+		parseAllWidgets();
+	}); 	
+</script>
+</div>
+
+
+<div style="display: none;"> 
+Server name = WAS2Server1
+
+</div>
+
+	</div>
+	<div class="modal fade forgot-password-modal" tabindex="-1" role="dialog" style="display: none;">
+		
+			  <div class="modal-dialog">
+			  <div class="modal-content">
+		        <div class="modal-header">
+		            <h3 class="modal-title">Mot de passe oublié </h3>
+		            <a class="close" href="javascript:void(0)" onclick="dijit.byId('resetPasswordPopupHandler').hide();" title="Fermer"></a>
+		        </div>
+		        
+		        <div class="modal-body" id="WC_PasswordResetForm_div_7">
+					<form class="form-group" name="ResetPasswordForm" method="post" action="" id="ResetPasswordForm">
+						<input name="challengeAnswer" value="-" id="WC_PasswordResetForm_FormInput_challengeAnswer_In_ResetPasswordForm_1" type="hidden">
+						<input name="storeId" value="10151" id="WC_PasswordResetForm_FormInput_storeId_In_ResetPasswordForm_1" type="hidden">
+						<input name="catalogId" value="10001" id="WC_PasswordResetForm_FormInput_catalogId_In_ResetPasswordForm_1" type="hidden">
+						<input name="langId" value="-2" id="WC_PasswordResetForm_FormInput_langId_In_ResetPasswordForm_1" type="hidden">
+						<input name="state" value="passwdconfirm" id="WC_PasswordResetForm_FormInput_state_In_ResetPasswordForm_1" type="hidden">
+						<input name="URL" value="LogonForm" id="WC_PasswordResetForm_FormInput_URL_In_ResetPasswordForm_1" type="hidden">
+						<input name="errorViewName" value="LogonForm" id="WC_PasswordResetForm_FormInput_errorViewName_In_ResetPasswordForm_1" type="hidden">
+						<input name="page" value="resetPassword" type="hidden">								 
+						<fieldset>
+								
+							<input class="form-control" value="Email " onfocus="this.value=''" onblur="CustomLogonForm.isEmptyField(this,MessageHelper.messages['ERROR_EmailEmpty']);CustomAddressHelper.isValidServerMail(this,MessageHelper.messages['ERROR_EmailEmpty'])" aria-required="true" aria-describedby="error_msg" size="25" name="logonId" id="logonIdReset">
+							<span class="errorMsg resetPassword" id="logonIdReset_errorMsg" style="display: none;"></span>
+			             </fieldset>
+	             <fieldset>
+			                    <label for="captcha">
+			                        Saisir le code de sécurité
+			                    </label>
+							<input class="form-control" onblur="CustomLogonForm.isEmptyField(this,MessageHelper.messages['ERROR_CaptchaEmpty'])" aria-required="true" aria-describedby="error_msg" size="25" name="captcha" id="captcha">
+							<span class="errorMsg resetPassword" id="captcha_errorMsg" style="display: none;"></span>
+						 </fieldset>
+			             <div class="jCaptcha" id="captchaDisplayRefreshArea">
+							<img src="INWI%20-%20Connexion_files/jcaptcha.jpg" alt="Captcha" title="Captcha" id="captchaDisplayImg">
+						 	<a href="javascript:void(0)" id="captchaDisplayResetHandler" title="Refresh" class="refresh">Refresh</a>
+						 </div>
+						 <script type="text/javascript">
+						 	dojo.connect(dojo.byId('captchaDisplayResetHandler'), 'onclick', function(ev){
+						 		var date = new Date().getTime();
+						 		dojo.attr(dojo.byId('captchaDisplayImg'), 'src', '://boutique.inwi.ma/webapp/wcs/stores/servlet/jcaptcha.jpg?id='+date);
+						 	});
+						 </script>							<a href="javascript:void(0)" role="button" title="Valider" class="btn btn-primary" id="WC_PasswordResetForm_Link_2" onclick="javascript:CustomLogonForm.prepareSubmitResetPassword(document.ResetPasswordForm);">
+								<div class="button_text">Envoyer le nouveau mot de passe</div>
+							</a>
+					</form>
+				</div>   
+		    </div>
+		    </div>
+		
+</div>
+
+
+
+
+	
+
+
+
+</body></html>

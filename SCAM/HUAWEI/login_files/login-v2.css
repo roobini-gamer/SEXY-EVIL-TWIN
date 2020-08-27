@@ -1,0 +1,440 @@
+﻿html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+textarea {
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-modify: read-write-plaintext-only;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+.LANG-sa .direction {
+  text-align: right;
+  direction: rtl;
+}
+
+a {
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+input::-webkit-input-placeholder {
+  color: #666;
+}
+
+input::-moz-placeholder {
+  color: #666;
+}
+
+input::-moz-placeholder {
+  color: #666;
+}
+
+input::-ms-input-placeholder {
+  color: #666;
+}
+
+.pageLogin {
+  width: 100%;
+  max-width: 470px;
+  margin: 0 auto;
+  padding: 75px 20px 86px;
+}
+
+.LANG-en .pageLogin h2 {
+  font-family: LT_Medium, Arial;
+}
+
+.pageLogin h2 {
+  font-size: 30px;
+  line-height: 1.2;
+  text-align: center;
+  color: #333;
+}
+
+.loginForm {
+  padding-top: 30px;
+}
+
+.input-account,
+.input-password {
+  position: relative;
+}
+
+.input-account input.red,
+.input-password input.red {
+  border: 1px solid #d20a2c;
+}
+
+.input-password {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.input-account span,
+.input-password span {
+  position: absolute;
+  display: block;
+  background-image: url(/Assets/enp/v2/img/login-icon-v2.png);
+  background-repeat: no-repeat;
+}
+
+.input-account span {
+  top: 14px;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  background-position: -69px -1px;
+}
+
+.input-password span {
+  top: 12px;
+  left: 15px;
+  width: 15px;
+  height: 20px;
+  background-position: -71px -23px;
+}
+
+.input-account input,
+.input-password input {
+  font-size: 16px;
+  line-height: 48px;
+  width: 100%;
+  height: 48px;
+  padding-left: 45px;
+  color: #000;
+  border: none;
+  border: 1px solid #e2e2e2;
+  outline: none;
+}
+
+.input-account input:focus,
+.input-password input:focus {
+  border: 1px solid #adadad;
+}
+
+.error-tip {
+  display: none;
+  padding: 5px 0;
+}
+
+.error-tip p {
+  font-size: 14px;
+  color: #d20a2c;
+}
+
+.input-btn {
+  padding-top: 10px;
+}
+
+.input-btn input {
+  font-size: 16px;
+  line-height: 45px;
+  width: 100%;
+  height: 48px;
+  cursor: pointer;
+  -webkit-transition: .4s;
+  transition: .4s;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  outline: none;
+  background: #d20a2c;
+}
+
+.input-btn input:hover {
+  background: #b20000;
+}
+
+.forget-password {
+  margin-top: 20px;
+}
+
+.forget-password a {
+  font-size: 14px;
+  float: right;
+  margin-top: 1px;
+  color: #333;
+  border-bottom: 1px solid #adadad;
+}
+
+.forget-password em {
+  font-style: normal;
+  float: right;
+  padding: 0 15px;
+}
+
+.LANG-sa .forget-password em {
+  float: left;
+}
+
+.forget-password a:hover {
+  color: #d20a2c;
+  border-bottom: 1px solid #d20a2c;
+}
+
+.remember-me {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.remember-me input {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  display: block;
+  display: block\9;
+  width: 16px;
+  height: 16px;
+  opacity: 0;
+}
+
+.remember-me input:checked+span {
+  background-position: -45px -17px;
+}
+
+.remember-me span {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  display: inline-block;
+  display: none\9;
+  width: 16px;
+  height: 16px;
+  background-image: url(/Assets/enp/v2/img/login-icon-v2.png);
+  background-repeat: no-repeat;
+  background-position: -45px -1px;
+}
+
+.remember-me p {
+  font-size: 14px;
+  line-height: 1.375;
+  padding-left: 25px;
+  color: #999;
+  color: #999;
+}
+
+.or-connect-with {
+  position: relative;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.or-connect-with:after {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  content: '';
+  background: #e4e4e4;
+}
+
+.or-connect-with h4 {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  padding: 0 20px;
+  color: #999;
+  background: #fff;
+}
+
+.or-connect-with .icon {
+  font-size: 0;
+  padding: 12px 0 40px;
+  width: auto;
+  height: auto;
+}
+
+.or-connect-with .icon a {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin: 0 10px;
+  -webkit-transition: 0s;
+  transition: 0s;
+  vertical-align: middle;
+  background-image: url(/Assets/enp/v2/img/login-icon-v2.png);
+  background-repeat: no-repeat;
+}
+
+.or-connect-with .icon a.qq {
+  background-position: -1px -1px;
+}
+
+.or-connect-with .icon a.qq:hover {
+  background-position: -1px -37px;
+}
+
+.or-connect-with .icon a.weixin {
+  background-position: -1px -73px;
+}
+
+.or-connect-with .icon a.weixin:hover {
+  background-position: -1px -109px;
+}
+
+.or-connect-with .icon a.in {
+  background-position: -1px -145px;
+}
+
+.or-connect-with .icon a.in:hover {
+  background-position: -1px -181px;
+}
+
+.dont-account {
+  padding-top: 13px;
+  border-top: 1px solid #e4e4e4;
+  text-align: center;
+}
+
+.dont-account a {
+  font-size: 16px;
+  line-height: 1.375;
+  color: #333;
+}
+
+.dont-account p {
+  font-size: 16px;
+  line-height: 1.375;
+  display: inline;
+  padding-right: 5px;
+  color: #333;
+}
+
+.dont-account a.create {
+  border-bottom: 1px solid #adadad;
+}
+
+.dont-account a.create:hover {
+  color: #d20a2c;
+  border-bottom: 1px solid #d20a2c;
+}
+
+.statement a {
+  float: left;
+  border-bottom: none;
+}
+
+.statement a:hover {
+  border-bottom: none;
+}
+
+.statement em {
+  float: left;
+}
+
+.statement {
+  padding-top: 13px;
+  border-top: 1px solid #e4e4e4;
+  padding-bottom: 30px;
+}
+
+.statement a.help {
+  font-size: 14px;
+  position: relative;
+  float: right;
+  padding-left: 22px;
+  -webkit-transition: 0s;
+  transition: 0s;
+  color: #b4b4b4;
+}
+
+.statement a.help:hover {
+  color: #d20a2c;
+}
+
+.statement a.help:hover span {
+  background-position: -45px -51px;
+}
+
+.statement a.help span {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  display: block;
+  width: 18px;
+  height: 18px;
+  -webkit-transition: 0s;
+  transition: 0s;
+  background-image: url(/Assets/enp/v2/img/login-icon-v2.png);
+  background-repeat: no-repeat;
+  background-position: -45px -33px;
+}
+
+/*阿语特殊处理*/
+.LANG-sa .input-account span {
+  right: 12px;
+}
+
+.LANG-sa .input-password span {
+  right: 15px;
+}
+
+.LANG-sa .input-account input,
+.LANG-sa .input-password input {
+  padding-right: 45px;
+}
+
+.LANG-sa .forget-password a {
+  float: left;
+}
+
+.LANG-sa .remember-me input {
+  right: 0;
+}
+
+.LANG-sa .remember-me span {
+  right: 0;
+}
+
+.LANG-sa .remember-me p {
+  padding-right: 25px;
+}
+
+.LANG-sa .dont-account a.help {
+  float: left;
+}
+
+.LANG-sa .dont-account a.help span {
+  right: 0;
+}
+
+.LANG-sa .dont-account a.help {
+  padding-right: 22px;
+  padding-left: 0;
+}
+
+.LANG-sa .statement a {
+  float: right;
+}
+
+.LANG-sa .statement em {
+  float: right;
+}
+
+.LANG-sa .statement a.help {
+  float: left;
+  padding-right: 22px;
+  padding-left: 0;
+}
+
+.LANG-sa .statement a.help span {
+  right: 0;
+  top: 5px;
+}
