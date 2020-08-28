@@ -29,6 +29,8 @@
 ```
 $ git clone https://github.com/roobini-gamer/SEXY-EVIL-TWIN.git
 
+$ chmod +x SEXY-EVIL-TWIN
+
 $ cd SEXY-EVIL-TWIN
 
 $ bash SEXY-EVIL-TWIN
