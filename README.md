@@ -26,17 +26,17 @@
 
 # Features
 
-> Compatible with wifislax, kali linux, parrotOS and more
-> Capture handshake (can be used without handshake)
-> choose one of several web interfaces tailored for you (thanks to the collaboration of the users)
-> Mounts one FakeAP imitating the original
-> It creates a DNS server to redirect all requests to the Host
-> The web server with the selected interface is launched
-> The mechanism is launched to check the validity of the passwords is introduced
-> It deauthentificate all users of the network, hoping to connect to FakeAP and enter the password.
-> The attack will stop after the correct password checking
-> Available 13 language (English, Arabic, Spanish, Indonesian, Turkish, Russian, German, Chinese, Polish, Italian, Hebrew, Thai, Norwegian)
-> Available 24 router login page (scama)
+* Compatible with wifislax, kali linux, parrotOS and more
+* Capture handshake (can be used without handshake)
+* choose one of several web interfaces tailored for you (thanks to the collaboration of the users)
+* Mounts one FakeAP imitating the original
+* It creates a DNS server to redirect all requests to the Host
+* The web server with the selected interface is launched
+* The mechanism is launched to check the validity of the passwords is introduced
+* It deauthentificate all users of the network, hoping to connect to FakeAP and enter the password.
+* The attack will stop after the correct password checking
+* Available 13 language (English, Arabic, Spanish, Indonesian, Turkish, Russian, German, Chinese, Polish, Italian, Hebrew, Thai, Norwegian)
+* Available 25 router login page (scama)
 
 # Requirements
 
