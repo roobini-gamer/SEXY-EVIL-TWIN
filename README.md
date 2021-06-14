@@ -1,5 +1,5 @@
 
-#Dear who watching this repo this script has a tons of bugs im working to fix them all better wait until i release a newer version
+# Dear who watching this repo this script has a tons of bugs im working to fix them all better wait until i release a newer version
 
 
 
