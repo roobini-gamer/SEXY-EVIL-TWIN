@@ -1,3 +1,9 @@
+
+#Dear who watching this repo this script has a tons of bugs im working to fix them all better wait until i release a newer version
+
+
+
+
 # SEXY-EVIL-TWIN : Makes Evil Twin Attack More Sexy
 
 # How it works
