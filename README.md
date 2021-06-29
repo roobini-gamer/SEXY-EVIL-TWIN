@@ -1,5 +1,5 @@
 
-# Dear who watching this repo this script has a tons of bugs im working to fix them all better wait until i release a newer version
+# Dear who watching this repo i removed the script it has a tons of bugs im working to fix them all i dont know how much times needs but better wait until i release a newer version and dont use the old one (from forks or re-uploaded somewhere) thank you for understanding 
 
 
 
